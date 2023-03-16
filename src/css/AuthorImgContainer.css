@@ -1,0 +1,58 @@
+.author-img-container {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  color: white;
+  transition: 2s all ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.author-img-container.scroll .img-border {
+  transition: 2s all ease-in-out;
+}
+.author-img-container .img-border {
+  height: 300px;
+  width: 300px;
+  border: 1px solid white;
+  position: relative;
+}
+.author-img-container .img-border img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: -10%;
+  left: -10%;
+}
+
+@media screen and (max-width: 1070px) {
+  .author-img-container {
+    position: inherit;
+    top: 0%;
+    left: 0%;
+  }
+}
+@media screen and (max-width: 967px) {
+  .author-img-container .img-border {
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .author-img-container .img-border {
+    width: 250px;
+    height: 230px;
+  }
+  .author-img-container .img-border img {
+    top: -7%;
+    left: -7%;
+  }
+}
+@media screen and (max-width: 376px) {
+  .author-img-container .img-border {
+    width: 250px;
+    height: 200px;
+  }
+}/*# sourceMappingURL=AuthorImgContainer.css.map */

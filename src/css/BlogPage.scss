@@ -1,0 +1,23 @@
+.blog {
+  background: black;
+
+  .head {
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: var(--background-yellow);
+    text-align: center;
+    padding-top: 190px;
+    font-size: 28px;
+  }
+
+  section {
+    padding: 100px 100px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .blog {
+    section {
+      padding: 100px 50px;
+    }
+  }
+}

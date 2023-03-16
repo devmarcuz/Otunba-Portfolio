@@ -1,0 +1,35 @@
+.left-home-media {
+  background: var(--background-yellow);
+  height: 60vh;
+  width: 100%;
+  display: none;
+  padding: 50px;
+  user-select: none;
+}
+
+@media screen and (max-width: 1070px) {
+  .left-home-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .left-home-media {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .left-home-media {
+    height: 35vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .left-home-media {
+    padding: 0px;
+    height: 40vh;
+  }
+}

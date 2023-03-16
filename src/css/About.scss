@@ -1,0 +1,321 @@
+.about-section {
+  width: 100%;
+  // height: 80vh;
+  background: black;
+  display: flex;
+  padding: 100px 0;
+  padding-bottom: 50px;
+  padding-left: 120px;
+  padding-right: 80px;
+
+  .left-content {
+    width: 50%;
+    padding-right: 150px;
+
+    h1 {
+      -webkit-text-stroke: 0.5px;
+      -webkit-text-stroke-color: var(--background-yellow);
+      font-size: 50px;
+    }
+
+    p {
+      color: rgb(185, 184, 184);
+      font-size: 15px;
+      padding-top: 30px;
+
+      span {
+        color: var(--background-yellow);
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .right-content {
+    width: 50%;
+    padding-top: 30px;
+    color: var(--background-yellow);
+    opacity: 0.6;
+    user-select: none;
+
+    .drop-container {
+      width: 100%;
+
+      .drop {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .font-title {
+          font-size: 40px;
+          margin-right: 20px;
+        }
+
+        .container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 70%;
+          cursor: pointer;
+
+          .main {
+            p {
+              opacity: 0.6;
+            }
+          }
+
+          .caret {
+            cursor: pointer;
+
+            .anime-in {
+              animation: anime-in 0.4s forwards ease-in-out;
+            }
+
+            .anime-out {
+              animation: anime-out 0.4s forwards ease-in-out;
+            }
+          }
+        }
+      }
+
+      .content {
+        margin-left: 60px;
+        margin-bottom: 20px;
+        width: 70%;
+
+        .tech {
+          width: 90%;
+          margin: auto;
+
+          @media screen and (max-width: 500px) {
+            width: 100%;
+          }
+
+          .container {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .text {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              p {
+                padding-right: 10px;
+              }
+
+              .icon {
+                font-size: 20px;
+              }
+            }
+          }
+
+          .range {
+            width: 100%;
+            height: 5px;
+            background: rgb(66, 66, 66);
+            border-radius: 5px;
+            margin-bottom: 10px;
+            overflow: hidden;
+
+            .bar {
+              height: 5px;
+              border-radius: 5px;
+              background: gold;
+            }
+          }
+        }
+
+        .tech-stack {
+          width: 90%;
+          background: var(--background-yellow);
+          padding: 15px;
+          margin: auto;
+
+          @media screen and (max-width: 500px) {
+            width: 100%;
+          }
+
+          .text {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            color: black;
+            padding-bottom: 10px;
+
+            p {
+              padding-left: 10px;
+              font-weight: 600;
+            }
+
+            .icon-tech {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes anime-out {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes anime-in {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .about-section {
+    flex-direction: column;
+    padding: 50px 0;
+    padding-bottom: 10px;
+    padding-left: 90px;
+    padding-right: 80px;
+
+    .left-content {
+      width: 100%;
+      padding-right: 0px;
+    }
+
+    .right-content {
+      width: 100%;
+      padding-top: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .about-section {
+    padding: 50px 0;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    .right-content {
+      .drop-container {
+        .drop {
+          .container {
+            width: 90%;
+          }
+        }
+        .content {
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-section {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    .left-content {
+      h1 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .right-content {
+      .drop-container {
+        .drop {
+          .font-title {
+            font-size: 23px;
+          }
+          .container {
+            width: 90%;
+
+            .main {
+              h2 {
+                font-size: 22px;
+              }
+
+              p {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .content {
+          margin-left: 40px;
+          margin-bottom: 20px;
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .about-section {
+    .left-content {
+      h1 {
+        font-size: 33px;
+      }
+    }
+
+    .right-content {
+      .drop-container {
+        .drop {
+          .font-title {
+            font-size: 23px;
+          }
+          .container {
+            width: 90%;
+
+            .main {
+              h2 {
+                font-size: 18px;
+              }
+
+              p {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+        .content {
+          margin-left: 40px;
+          margin-bottom: 20px;
+          width: 85%;
+
+          .tech {
+            .container {
+              .text {
+                p {
+                  font-size: 14px;
+                }
+
+                .icon {
+                  font-size: 17px;
+                }
+              }
+              .rate {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

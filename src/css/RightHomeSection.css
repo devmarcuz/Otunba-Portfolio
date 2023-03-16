@@ -1,0 +1,37 @@
+.right-home {
+  background: var(--background-yellow);
+  flex: 0.4;
+  padding-right: 70px;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  padding-bottom: 150px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.right-home .shapes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.right-home .shapes .square {
+  border: 3px solid black;
+  width: 10px;
+  height: 10px;
+}
+.right-home .shapes .poly {
+  margin-top: 12px;
+  background: black;
+  width: 6px;
+  height: 6px;
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 1070px) {
+  .right-home {
+    display: none;
+  }
+}/*# sourceMappingURL=RightHomeSection.css.map */

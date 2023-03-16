@@ -1,0 +1,143 @@
+.menu-responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(228, 194, 0);
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+}
+.menu-responsive .menu-list {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 40px 80px;
+  transition: 0.5s all ease-in-out;
+  transform-origin: top;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.menu-responsive .menu-list li {
+  padding-bottom: 20px;
+  font-size: 20px;
+  transition: 0.6s all ease-in-out;
+  cursor: pointer;
+  opacity: 1;
+  transform: translateX(0);
+}
+.menu-responsive .menu-list li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.menu-responsive .menu-list li:nth-child(2) {
+  transition-delay: 0.3s;
+}
+.menu-responsive .menu-list li:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.menu-responsive .menu-list li:nth-child(4) {
+  transition-delay: 0.5s;
+}
+.menu-responsive .menu-list li.active {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.8s all ease-in-out;
+}
+.menu-responsive .menu-list li a {
+  position: relative;
+  transition: 0.5s all ease-in-out;
+}
+.menu-responsive .menu-list li a::after {
+  content: "";
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  height: 70%;
+  width: 15px;
+  background: rgb(255, 108, 82);
+  opacity: 0;
+  transition: 0.5s all ease-in-out;
+}
+.menu-responsive .menu-list li a:hover::after {
+  right: -10%;
+  bottom: 10%;
+  height: 70%;
+  width: 15px;
+  opacity: 0.4;
+}
+.menu-responsive .menu-list a {
+  color: black;
+}
+.menu-responsive .menu-list .socials {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 100px;
+  transform: translateX(0);
+  opacity: 1;
+  transition: 0.8s all ease-in-out;
+}
+.menu-responsive .menu-list .socials a {
+  font-size: 25px;
+  transition: 0.3s all ease-in-out;
+}
+.menu-responsive .menu-list .socials a:hover {
+  transform: scale(1.1) translateY(-5px);
+  color: rgb(14, 12, 0);
+}
+.menu-responsive .menu-list .socials.active {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.8s all ease-in-out;
+}
+
+@media screen and (min-width: 678px) {
+  .menu-responsive {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+@media screen and (max-width: 677px) {
+  .menu-responsive {
+    opacity: 0;
+    animation: fadeOut 0.4s forwards ease-in-out;
+  }
+  .menu-responsive.active {
+    opacity: 1;
+    pointer-events: all;
+    animation: fade 0.4s forwards ease-in-out;
+  }
+}
+@media screen and (max-width: 400px) {
+  .menu-responsive .menu-list {
+    padding: 40px 60px;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes liii {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}/*# sourceMappingURL=MenuResponsive.css.map */

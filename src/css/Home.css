@@ -1,0 +1,161 @@
+.home {
+  width: 100%;
+  overflow-x: hidden;
+}
+.home main {
+  display: flex;
+  width: 100%;
+}
+.home .loading-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100000000000000000000000;
+  overflow: hidden;
+}
+.home .loading-container .loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+  width: 40px;
+  height: 40px;
+  margin: -76px 0 0 -76px;
+  border: 3px solid #3d3d3d;
+  border-radius: 50%;
+  border-top: 3px solid #ffffff;
+  animation: spin 2s linear infinite;
+}
+.home .loading-container .ids-ripple {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  z-index: 100;
+}
+.home .loading-container .ids-ripple div {
+  position: absolute;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  opacity: 1;
+  animation: ids-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+@keyframes ids-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+.home .loading-container .fade {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s all ease-in-out;
+}
+.home .loading-container .left {
+  background: rgb(0, 0, 0);
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 50%;
+  animation-delay: 3s;
+  animation-duration: 4s;
+  animation-name: move-left;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  position: relative;
+}
+.home .loading-container .right {
+  background: var(--background-yellow);
+  width: 100%;
+  height: 50%;
+  animation-delay: 3s;
+  animation-duration: 4s;
+  animation-name: move-right;
+  animation-fill-mode: forwards;
+  transform: translateY(0);
+  animation-timing-function: ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.home .remove-load {
+  display: none;
+  pointer-events: none;
+}
+
+.overflow-home {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-responsive {
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 1070px) {
+  main {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1071px) {
+  main {
+    height: 100vh;
+  }
+}
+@keyframes move-left {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1000%);
+    pointer-events: none;
+  }
+}
+@keyframes move-right {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(1000%);
+    pointer-events: none;
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transfrom: rotate(360deg);
+  }
+}/*# sourceMappingURL=Home.css.map */
