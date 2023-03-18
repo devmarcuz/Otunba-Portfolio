@@ -212,7 +212,7 @@ const About = () => {
             </div>
             <div className="container" onClick={dropClick4}>
               <div className="main">
-                <h2>Basic Skills </h2>
+                <h2>Core Skills </h2>
               </div>
               <div className="caret">
                 <FaChevronDown className={drop4 ? "anime-in" : "anime-out"} />

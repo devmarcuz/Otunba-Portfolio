@@ -15,8 +15,6 @@ import "../css/Main.css";
 import Footer from "../components/Footer";
 import { getBlogs } from "../redux/actions/blogAction";
 import { useDispatch } from "react-redux";
-import Wave from "../assets/wave-1.svg";
-import Wave1 from "../assets/wave-2.svg";
 
 const Home = () => {
   const [menuRepo, setMenuRepo] = useState(false);
