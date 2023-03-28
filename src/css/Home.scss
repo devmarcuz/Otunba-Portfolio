@@ -101,6 +101,7 @@
       animation-fill-mode: forwards;
       animation-timing-function: ease-in-out;
       position: relative;
+      z-index: 99;
 
       // &::before {
       //   content: "";
@@ -137,6 +138,7 @@
       transform: translateY(0);
       animation-timing-function: ease-in-out;
       object-fit: cover;
+      z-index: 99;
     }
   }
 

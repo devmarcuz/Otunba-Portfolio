@@ -103,7 +103,7 @@ const Home = () => {
       <Skill />
       <About />
       <Portfolio />
-      <BlogComponent />
+      {/* <BlogComponent /> */}
       <Contact />
       <Footer />
     </div>

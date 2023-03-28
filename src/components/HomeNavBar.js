@@ -123,9 +123,9 @@ const HomeNavBar = ({ setMenuRepo, menuRepo, setActive, active }) => {
           <li className={!active ? "active" : ""}>
             <Link to={work ? "/" : "/work"}>{work ? "Home" : "Work"}</Link>
           </li>
-          <li className={!active ? "active" : ""}>
+          {/* <li className={!active ? "active" : ""}>
             <Link to={blog ? "/" : "/shelf"}>{blog ? "Home" : "Blog"}</Link>
-          </li>
+          </li> */}
           <li className={!active ? "active" : ""}>
             <a href="#">Resume</a>
           </li>
