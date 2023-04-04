@@ -28,132 +28,134 @@
       align-items: center;
       justify-content: center;
 
-      .project {
-        height: 280px;
-        position: relative;
-        transition: 0.3s all ease-in-out;
-        overflow: hidden;
-        color: black;
-        // background: yellow;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
+      @media screen and (min-width: 700px) {
+        .project {
+          height: 280px;
+          position: relative;
           transition: 0.3s all ease-in-out;
-          user-select: none;
-        }
-
-        .overlay {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          content: "";
-          top: 0;
-          left: 0;
-          background: rgba(68, 58, 1, 0.616);
-          pointer-events: none;
-          transition: 0.3s all ease-in-out;
-          opacity: 0.4;
-        }
-
-        .title-overlay {
-          position: absolute;
-          content: "";
-          bottom: -100%;
-          left: 0;
-          background: gold;
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          padding: 5px 10px;
-          transition: 0.3s all ease-in-out;
-          user-select: all;
-
-          p {
-            font-size: 14px;
-          }
-
-          h3 {
-            cursor: default;
-          }
-
-          .technologies {
-            display: flex;
-            width: 100%;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 10px;
-            padding-bottom: 10px;
-
-            .stack {
-              flex: 0.8;
-
-              span {
-                background: rgba(0, 0, 0, 0.575);
-                color: rgb(253, 220, 33);
-                font-size: 11px;
-                padding: 5px;
-                border-radius: 5px;
-                margin-right: 3px;
-              }
-            }
-
-            a {
-              flex: 0.2;
-              color: black;
-              font-size: 23px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
-              .git {
-                float: left;
-              }
-            }
-          }
-        }
-
-        .view {
-          position: absolute;
-          content: "";
-          top: 20%;
-          left: 50%;
-          transform: translate(-50%, -20%) scale(0.8);
-          background: gold;
-          border-radius: 50%;
-          width: 100px;
-          height: 100px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          opacity: 0;
-          transition: 0.3s all ease-in-out;
-          cursor: pointer;
-          user-select: none;
+          overflow: hidden;
           color: black;
+          // background: yellow;
 
-          p {
-            font-size: 13px;
-            text-align: center;
-            font-weight: 500;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.3s all ease-in-out;
+            user-select: none;
           }
-        }
 
-        &:hover img {
-          transform: scale(1.3);
-        }
+          .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            background: rgba(68, 58, 1, 0.616);
+            pointer-events: none;
+            transition: 0.3s all ease-in-out;
+            opacity: 0.4;
+          }
 
-        &:hover .view {
-          opacity: 1;
-        }
+          .title-overlay {
+            position: absolute;
+            content: "";
+            bottom: -100%;
+            left: 0;
+            background: gold;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 5px 10px;
+            transition: 0.3s all ease-in-out;
+            user-select: all;
 
-        &:hover .overlay {
-          background: none;
-        }
+            p {
+              font-size: 14px;
+            }
 
-        &:hover .title-overlay {
-          bottom: 0;
+            h3 {
+              cursor: default;
+            }
+
+            .technologies {
+              display: flex;
+              width: 100%;
+              align-items: center;
+              justify-content: space-between;
+              padding-top: 10px;
+              padding-bottom: 10px;
+
+              .stack {
+                flex: 0.8;
+
+                span {
+                  background: rgba(0, 0, 0, 0.575);
+                  color: rgb(253, 220, 33);
+                  font-size: 11px;
+                  padding: 5px;
+                  border-radius: 5px;
+                  margin-right: 3px;
+                }
+              }
+
+              a {
+                flex: 0.2;
+                color: black;
+                font-size: 23px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .git {
+                  float: left;
+                }
+              }
+            }
+          }
+
+          .view {
+            position: absolute;
+            content: "";
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -20%) scale(0.8);
+            background: gold;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: 0.3s all ease-in-out;
+            cursor: pointer;
+            user-select: none;
+            color: black;
+
+            p {
+              font-size: 13px;
+              text-align: center;
+              font-weight: 500;
+            }
+          }
+
+          &:hover img {
+            transform: scale(1.3);
+          }
+
+          &:hover .view {
+            opacity: 1;
+          }
+
+          &:hover .overlay {
+            background: none;
+          }
+
+          &:hover .title-overlay {
+            bottom: 0;
+          }
         }
       }
     }
