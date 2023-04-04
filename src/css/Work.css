@@ -31,6 +31,7 @@
   position: relative;
   transition: 0.3s all ease-in-out;
   overflow: hidden;
+  color: black;
 }
 .my-work section .projects .project img {
   width: 100%;
@@ -49,7 +50,7 @@
   content: "";
   top: 0;
   left: 0;
-  background: rgb(68, 58, 1);
+  background: rgba(68, 58, 1, 0.616);
   pointer-events: none;
   transition: 0.3s all ease-in-out;
   opacity: 0.4;
@@ -61,22 +62,56 @@
   left: 0;
   background: gold;
   width: 100%;
-  height: 50px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   padding: 5px 10px;
   transition: 0.3s all ease-in-out;
+  -webkit-user-select: all;
+     -moz-user-select: all;
+          user-select: all;
+}
+.my-work section .projects .project .title-overlay p {
+  font-size: 14px;
 }
 .my-work section .projects .project .title-overlay h3 {
   cursor: default;
 }
+.my-work section .projects .project .title-overlay .technologies {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.my-work section .projects .project .title-overlay .technologies .stack {
+  flex: 0.8;
+}
+.my-work section .projects .project .title-overlay .technologies .stack span {
+  background: rgba(0, 0, 0, 0.575);
+  color: rgb(253, 220, 33);
+  font-size: 11px;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 3px;
+}
+.my-work section .projects .project .title-overlay .technologies a {
+  flex: 0.2;
+  color: black;
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.my-work section .projects .project .title-overlay .technologies a .git {
+  float: left;
+}
 .my-work section .projects .project .view {
   position: absolute;
   content: "";
-  top: 50%;
+  top: 20%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -20%) scale(0.8);
   background: gold;
   border-radius: 50%;
   width: 100px;
@@ -90,6 +125,7 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  color: black;
 }
 .my-work section .projects .project .view p {
   font-size: 13px;

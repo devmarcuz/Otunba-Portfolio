@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HomeNavBar from "../components/HomeNavBar";
 import MenuReponsive from "../components/MenuReponsive";
 import Footer from "../components/Footer";
+import { FaGithubAlt } from "react-icons/fa";
 import "../css/Work.css";
 
 const Work = () => {
@@ -31,19 +32,45 @@ const Work = () => {
 
       <section>
         <div className="projects">
-          <div className="project">
-            <img src="/images/pexels-bryan-catota-3756766.jpg" alt="" />
+          <a
+            href="https://free-frames.vercel.app"
+            target="blank"
+            className="project"
+          >
+            <img
+              src="/images/FreeFrames — Mozilla Firefox 4_3_2023 7_57_51 AM.png"
+              alt=""
+            />
             <div className="overlay"></div>
             <div className="title-overlay">
-              <h3>Connectar</h3>
+              <h3>FreeFrames</h3>
+              <p>
+                An application that offers free high quality images that can be
+                used for any purpose.
+              </p>
+              <div className="technologies">
+                <div className="stack">
+                  <span>React.js</span> <span>SCSS</span>
+                </div>
+                <a
+                  href="https://github.com/devmarcuz/Free-Frames"
+                  target="blank"
+                >
+                  <FaGithubAlt className="git" />
+                </a>
+              </div>
             </div>
-            <div className="view">
+            <a
+              href="https://free-frames.vercel.app"
+              target="blank"
+              className="view"
+            >
               <p>
                 VIEW
                 <br /> PROJECT
               </p>
-            </div>
-          </div>
+            </a>
+          </a>
           <div className="project">
             <img src="/images/pexels-bryan-catota-3756766.jpg" alt="" />
             <div className="overlay"></div>
