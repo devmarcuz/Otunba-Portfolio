@@ -23,12 +23,13 @@ const Home = ({ showAnimation, setShowAnimation }) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    document.querySelector(".home").classList.add("overflow-home");
-  }, []);
+    if(showAnimation)
+      document.querySelector(".home").classList.add("overflow-home");
+  }, [showAnimation]);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      if (document.querySelector(".ids-ripple")) {
+      if (document.querySelector(".ids-ripple") ) {
         document.querySelector(".ids-ripple").classList.add("fade");
       }
     }, 2500);

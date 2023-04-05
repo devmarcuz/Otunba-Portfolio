@@ -22,11 +22,17 @@
 }
 .home-nav-responsive .logo .h2 {
   color: black;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .home-nav-responsive .logo .h2 h2 {
   cursor: pointer;
   padding-top: 30px;
   font-size: 26px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .home-nav-responsive .menu {
   flex: 0.4;
@@ -38,6 +44,9 @@
   position: relative;
   z-index: 100;
   margin-top: 30px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .home-nav-responsive .menu.location {
   background: transparent;
@@ -50,6 +59,9 @@
   cursor: pointer;
   z-index: 1;
   transition: 0.8s all ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .home-nav-responsive .menu .burger .bar-1 {
   width: 100%;
@@ -71,6 +83,9 @@
 .home-nav-responsive .menu .times {
   font-size: 25px;
   transition: 0.4s all ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .home-nav-responsive .menu .menu-list {
   position: absolute;

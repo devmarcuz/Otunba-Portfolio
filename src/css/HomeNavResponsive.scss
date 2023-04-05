@@ -24,11 +24,13 @@
 
     .h2 {
       color: black;
+      user-select: none;
 
       h2 {
         cursor: pointer;
         padding-top: 30px;
         font-size: 26px;
+        user-select: none;
       }
     }
   }
@@ -43,6 +45,7 @@
     position: relative;
     z-index: 100;
     margin-top: 30px;
+    user-select: none;
 
     &.location {
       background: transparent;
@@ -56,6 +59,7 @@
       cursor: pointer;
       z-index: 1;
       transition: 0.8s all ease-in-out;
+      user-select: none;
 
       .bar-1 {
         width: 100%;
@@ -81,6 +85,7 @@
     .times {
       font-size: 25px;
       transition: 0.4s all ease-in-out;
+      user-select: none;
     }
 
     .menu-list {
