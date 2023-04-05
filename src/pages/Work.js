@@ -32,11 +32,7 @@ const Work = () => {
 
       <section>
         <div className="projects">
-          <a
-            href="https://free-frames.vercel.app"
-            target="blank"
-            className="project"
-          >
+          <div className="project">
             <img
               src="/images/FreeFrames — Mozilla Firefox 4_3_2023 7_57_51 AM.png"
               alt=""
@@ -70,71 +66,42 @@ const Work = () => {
                 <br /> PROJECT
               </p>
             </a>
-          </a>
-          <div className="project">
-            <img src="/images/pexels-bryan-catota-3756766.jpg" alt="" />
-            <div className="overlay"></div>
-            <div className="title-overlay">
-              <h3>Connectar</h3>
-            </div>
-            <div className="view">
-              <p>
-                VIEW
-                <br /> PROJECT
-              </p>
-            </div>
           </div>
           <div className="project">
-            <img src="/images/pexels-bryan-catota-3756766.jpg" alt="" />
+            <img
+              src="/images/Glass Brigde - Google Chrome 4_4_2023 9_53_31 PM.png"
+              alt=""
+            />
             <div className="overlay"></div>
             <div className="title-overlay">
-              <h3>Connectar</h3>
+              <h3>Glass Bridge</h3>
+              <p>
+                A web application that stimulates a glass brigde over a
+                beautiful valley.
+              </p>
+              <div className="technologies">
+                <div className="stack">
+                  <span>React.js</span> <span>MongoDB</span>{" "}
+                  <span>Node.js</span>
+                </div>
+                <a
+                  href="https://github.com/devmarcuz/Glass-Bridge"
+                  target="blank"
+                >
+                  <FaGithubAlt className="git" />
+                </a>
+              </div>
             </div>
-            <div className="view">
+            <a
+              href="https://glass-bridge.vercel.app"
+              target="blank"
+              className="view"
+            >
               <p>
                 VIEW
                 <br /> PROJECT
               </p>
-            </div>
-          </div>
-          <div className="project">
-            <img src="/images/pexels-bryan-catota-3756766.jpg" alt="" />
-            <div className="overlay"></div>
-            <div className="title-overlay">
-              <h3>Connectar</h3>
-            </div>
-            <div className="view">
-              <p>
-                VIEW
-                <br /> PROJECT
-              </p>
-            </div>
-          </div>
-          <div className="project">
-            <img src="/images/pexels-bryan-catota-3756766.jpg" alt="" />
-            <div className="overlay"></div>
-            <div className="title-overlay">
-              <h3>Connectar</h3>
-            </div>
-            <div className="view">
-              <p>
-                VIEW
-                <br /> PROJECT
-              </p>
-            </div>
-          </div>
-          <div className="project">
-            <img src="/images/pexels-bryan-catota-3756766.jpg" alt="" />
-            <div className="overlay"></div>
-            <div className="title-overlay">
-              <h3>Connectar</h3>
-            </div>
-            <div className="view">
-              <p>
-                VIEW
-                <br /> PROJECT
-              </p>
-            </div>
+            </a>
           </div>
         </div>
       </section>

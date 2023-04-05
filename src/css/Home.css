@@ -38,7 +38,7 @@
   transform: translate(-50%, -50%);
   width: 80px;
   height: 80px;
-  z-index: 100;
+  z-index: 200;
 }
 .home .loading-container .ids-ripple div {
   position: absolute;
@@ -94,7 +94,7 @@
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
   position: relative;
-  z-index: 99;
+  z-index: 199;
 }
 .home .loading-container .right {
   background: var(--background-yellow);
@@ -108,7 +108,7 @@
   animation-timing-function: ease-in-out;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 99;
+  z-index: 199;
 }
 .home .remove-load {
   display: none;
