@@ -16,10 +16,9 @@ import Footer from "../components/Footer";
 import { getBlogs } from "../redux/actions/blogAction";
 import { useDispatch } from "react-redux";
 
-const Home = () => {
+const Home = ({ showAnimation, setShowAnimation }) => {
   const [menuRepo, setMenuRepo] = useState(false);
   const [active, setActive] = useState(false);
-  const [loader, setLoader] = useState(true);
 
   const dispatch = useDispatch();
 
@@ -28,14 +27,24 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    function removeLoader() {
-      setTimeout(() => {
-        if (document.querySelector(".ids-ripple")) {
-          document.querySelector(".ids-ripple").classList.add("fade");
-        }
-      }, 2500);
-    }
-    removeLoader();
+    // function removeLoader() {
+    //   setTimeout(() => {
+    //     if (document.querySelector(".ids-ripple")) {
+    //       document.querySelector(".ids-ripple").classList.add("fade");
+    //     }
+    //   }, 2500);
+    // }
+    // removeLoader();
+
+    const timeoutId = setTimeout(() => {
+      if (document.querySelector(".ids-ripple")) {
+        document.querySelector(".ids-ripple").classList.add("fade");
+      }
+    }, 2500);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   useEffect(() => {
@@ -46,6 +55,7 @@ const Home = () => {
           .querySelector(".loading-container")
           .classList.add("remove-load");
         document.querySelector(".loading-container").style.display = "none";
+        setShowAnimation(false);
       }, 4000);
     }
     removeHome();
@@ -80,14 +90,16 @@ const Home = () => {
 
   return (
     <div className="home" onClick={navigation}>
-      <div className="loading-container">
-        <div className="ids-ripple">
-          <div></div>
-          <div></div>
+      {showAnimation && (
+        <div className="loading-container">
+          <div className="ids-ripple">
+            <div></div>
+            <div></div>
+          </div>
+          <div className="left"></div>
+          <div className="right"></div>
         </div>
-        <div className="left"></div>
-        <div className="right"></div>
-      </div>
+      )}
       <HomeNavBar
         setMenuRepo={setMenuRepo}
         menuRepo={menuRepo}
