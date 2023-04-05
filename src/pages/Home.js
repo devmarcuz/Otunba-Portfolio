@@ -27,15 +27,6 @@ const Home = ({ showAnimation, setShowAnimation }) => {
   }, []);
 
   useEffect(() => {
-    // function removeLoader() {
-    //   setTimeout(() => {
-    //     if (document.querySelector(".ids-ripple")) {
-    //       document.querySelector(".ids-ripple").classList.add("fade");
-    //     }
-    //   }, 2500);
-    // }
-    // removeLoader();
-
     const timeoutId = setTimeout(() => {
       if (document.querySelector(".ids-ripple")) {
         document.querySelector(".ids-ripple").classList.add("fade");
