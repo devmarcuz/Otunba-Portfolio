@@ -127,10 +127,15 @@ const HomeNavBar = ({ setMenuRepo, menuRepo, setActive, active }) => {
             <Link to={blog ? "/" : "/shelf"}>{blog ? "Home" : "Blog"}</Link>
           </li> */}
           <li className={!active ? "active" : ""}>
-            <a href="#">Resume</a>
+            <a
+              href="https://drive.google.com/file/d/15GRR57zbU9Ga37RxaR_y2ls4DXke8-AF/view?usp=drivesdk"
+              target="blank"
+            >
+              Resume
+            </a>
           </li>
           <li className={!active ? "active" : ""}>
-            <a href="#">Contact</a>
+            <Link to="/?scrollToContact=true">Contact</Link>
           </li>
           <div className={!active ? "socials active" : "socials"}>
             <a

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import About from "../components/About";
-import BlogComponent from "../components/BlogComponent";
 import HomeNavBar from "../components/HomeNavBar";
 import LeftHomeSection from "../components/LeftHomeSection";
 import MenuReponsive from "../components/MenuReponsive";
@@ -13,23 +12,21 @@ import Contact from "../components/Contact";
 import "../css/Home.css";
 import "../css/Main.css";
 import Footer from "../components/Footer";
-import { getBlogs } from "../redux/actions/blogAction";
-import { useDispatch } from "react-redux";
 
 const Home = ({ showAnimation, setShowAnimation }) => {
   const [menuRepo, setMenuRepo] = useState(false);
   const [active, setActive] = useState(false);
 
-  const dispatch = useDispatch();
+  const location = useLocation();
 
   useEffect(() => {
-    if(showAnimation)
+    if (showAnimation)
       document.querySelector(".home").classList.add("overflow-home");
   }, [showAnimation]);
 
   useEffect(() => {
     const timeoutId = setTimeout(() => {
-      if (document.querySelector(".ids-ripple") ) {
+      if (document.querySelector(".ids-ripple")) {
         document.querySelector(".ids-ripple").classList.add("fade");
       }
     }, 2500);
@@ -43,19 +40,17 @@ const Home = ({ showAnimation, setShowAnimation }) => {
     function removeHome() {
       setTimeout(() => {
         document.querySelector(".home").classList.remove("overflow-home");
-        document
-          .querySelector(".loading-container")
-          .classList.add("remove-load");
-        document.querySelector(".loading-container").style.display = "none";
-        setShowAnimation(false);
+        if (document.querySelector(".loading-container")) {
+          document
+            .querySelector(".loading-container")
+            .classList.add("remove-load");
+          document.querySelector(".loading-container").style.display = "none";
+          setShowAnimation(false);
+        }
       }, 4000);
     }
     removeHome();
   }, []);
-
-  useEffect(() => {
-    dispatch(getBlogs());
-  }, [dispatch]);
 
   const navigation = (e) => {
     if (!e.target.classList.contains(".menu")) {
@@ -64,8 +59,6 @@ const Home = ({ showAnimation, setShowAnimation }) => {
       }
     }
   };
-
-  const location = useLocation();
 
   useEffect(() => {
     if (location.pathname === "/") {
@@ -77,6 +70,13 @@ const Home = ({ showAnimation, setShowAnimation }) => {
           nav.classList.remove("scroll");
         }
       });
+    }
+  }, [location]);
+
+  useEffect(() => {
+    const contactElem = document.querySelector(".contact");
+    if (location.search === "?scrollToContact=true" && contactElem) {
+      contactElem.scrollIntoView({ behaviour: "smooth" });
     }
   }, [location]);
 
