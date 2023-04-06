@@ -79,7 +79,8 @@ const MenuReponsive = ({ setMenuRepo, menuRepo }) => {
           </li>
           <div className={active ? "socials active" : "socials"}>
             <a
-              href="/#"
+              href="https://instagram.com/marcuzdrip"
+              target="_blank"
               onMouseEnter={() =>
                 setTimeout(() => {
                   setHover(true);
@@ -94,7 +95,8 @@ const MenuReponsive = ({ setMenuRepo, menuRepo }) => {
               {hover ? <RiInstagramFill /> : <FaInstagram />}
             </a>
             <a
-              href="/#"
+              href="https://linkedin.com/in/ademola-otunba-marcus-742ab1209"
+              target="blank"
               onMouseEnter={() =>
                 setTimeout(() => {
                   setHover1(true);
@@ -109,7 +111,8 @@ const MenuReponsive = ({ setMenuRepo, menuRepo }) => {
               {hover1 ? <FaLinkedin /> : <RiLinkedinFill />}
             </a>
             <a
-              href="/#"
+              href="https://github.com/devmarcuz"
+              target="blank"
               onMouseEnter={() =>
                 setTimeout(() => {
                   setHover2(true);
@@ -124,7 +127,8 @@ const MenuReponsive = ({ setMenuRepo, menuRepo }) => {
               {hover2 ? <FaGithub /> : <RiGithubLine />}
             </a>
             <a
-              href="/#"
+              href="https://twitter.com/marcuzdrip"
+              target="blank"
               onMouseEnter={() =>
                 setTimeout(() => {
                   setHover3(true);
