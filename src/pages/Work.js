@@ -103,6 +103,42 @@ const Work = () => {
               </p>
             </a>
           </div>
+          <div className="project">
+            <img
+              src="/images/SWIFT Chat App - Google Chrome 4_7_2023 6_18_41 PM.png"
+              alt=""
+            />
+            <div className="overlay"></div>
+            <div className="title-overlay">
+              <h3>Swift Chat</h3>
+              <p>
+                This is a chat application that allows users to create chat
+                rooms and communicate with other users in real-time.
+              </p>
+              <div className="technologies">
+                <div className="stack">
+                  <span>React.js</span> <span>MongoDB</span>{" "}
+                  <span>Node.js</span> <span>Socket.IO</span>
+                </div>
+                <a
+                  href="https://github.com/devmarcuz/SWIFT-Chat-App-Frontend"
+                  target="blank"
+                >
+                  <FaGithubAlt className="git" />
+                </a>
+              </div>
+            </div>
+            <a
+              href="https://swift-chat-apps.netlify.app"
+              target="blank"
+              className="view"
+            >
+              <p>
+                VIEW
+                <br /> PROJECT
+              </p>
+            </a>
+          </div>
         </div>
       </section>
 
