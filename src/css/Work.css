@@ -76,6 +76,11 @@
 .my-work section .projects .project .title-overlay h3 {
   cursor: default;
 }
+@media screen and (max-width: 600px) {
+  .my-work section .projects .project .title-overlay .technologies {
+    padding-top: 5px;
+  }
+}
 .my-work section .projects .project .title-overlay .technologies {
   display: flex;
   width: 100%;
@@ -94,10 +99,12 @@
   padding: 5px;
   border-radius: 5px;
   margin-right: 3px;
+  margin-bottom: 10px;
 }
 @media screen and (max-width: 500px) {
   .my-work section .projects .project .title-overlay .technologies .stack span {
     font-size: 10px;
+    padding: 3px;
   }
 }
 .my-work section .projects .project .title-overlay .technologies a {
@@ -142,8 +149,8 @@
 }
 @media screen and (max-width: 500px) {
   .my-work section .projects .project .view {
-    top: 10%;
-    transform: translate(-50%, -10%) scale(0.8);
+    top: 8%;
+    transform: translate(-50%, -8%) scale(0.65);
   }
 }
 .my-work section .projects .project:hover img {

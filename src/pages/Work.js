@@ -112,8 +112,8 @@ const Work = () => {
             <div className="title-overlay">
               <h3>Swift Chat</h3>
               <p>
-                This is a chat application that allows users to create chat
-                rooms and communicate with other users in real-time.
+                This is a chat application that allows users communicate with
+                users in real-time.
               </p>
               <div className="technologies">
                 <div className="stack">
