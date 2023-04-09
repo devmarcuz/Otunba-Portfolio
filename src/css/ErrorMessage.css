@@ -1,9 +1,17 @@
 .error-message {
-  color: rgb(168, 0, 0);
-  padding-bottom: 15px;
+  color: rgb(214, 95, 95);
+  margin-bottom: 15px;
+  width: 100%;
+  background: rgba(255, 79, 79, 0.151);
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .success-message {
-  color: rgb(6, 173, 0);
-  padding-bottom: 15px;
+  color: rgb(2, 143, 0);
+  margin-bottom: 15px;
+  width: 100%;
+  background: rgba(139, 255, 168, 0.082);
+  padding: 10px;
+  border-radius: 5px;
 }/*# sourceMappingURL=ErrorMessage.css.map */

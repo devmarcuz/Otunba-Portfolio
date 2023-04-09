@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import isEmpty from "validator/lib/isEmpty";
 import { useSelector, useDispatch } from "react-redux";
-import { errorMessage, clearMessage } from "../redux/actions/messageAction";
+import {
+  errorMessage,
+  clearMessage,
+  successMessage,
+} from "../redux/actions/messageAction";
 import "../css/Contact.css";
 import { ErrorMessage, SuccessMessage } from "./Message";
+import axios from "axios";
+import isEmail from "validator/lib/isEmail";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,6 +34,8 @@ const Contact = () => {
       setFormData({ ...formData, textValue: "" });
     }
   };
+
+  const api = "https://otunba-portfolio-backend.onrender.com";
 
   const contactArea = (e) => {
     if (!e.target.classList.contains("text-area")) {
@@ -100,19 +108,58 @@ const Contact = () => {
       setBorderError2(true);
       setBorderError3(true);
     }
+
     if (isEmpty(name)) {
       setBorderError1(true);
     }
-    if (isEmpty(email)) {
+
+    if (isEmpty(email) || !isEmail(email)) {
       setBorderError2(true);
     }
+
+    if (!isEmail(email) && !isEmpty(email)) {
+      dispatch(errorMessage("Invalid Email"));
+      // dispatch(successMessage("sucess"));
+    }
+
     if (isEmpty(textValue)) {
       setBorderError3(true);
     }
+
     if (!isEmpty(name) && !isEmpty(email) && !isEmpty(textValue)) {
       setBorderError1(false);
       setBorderError2(false);
       setBorderError3(false);
+    }
+
+    if (
+      !isEmpty(name) &&
+      !isEmpty(email) &&
+      !isEmpty(textValue) &&
+      isEmail(email)
+    ) {
+      axios
+        .post(`${api}/send-email`, { name, email, textValue })
+        .then((res) => {
+          setFormData({ ...formData, name: "", email: "", textValue: "" });
+          dispatch(successMessage("Message succefully sent!!!"));
+        })
+        .catch((err) => {
+          if (!err.response) {
+            return dispatch(errorMessage("No internet connection!!"));
+          }
+
+          if (err.response.data.error) {
+            return dispatch(errorMessage(err.response.data.error));
+          } else if (
+            err.response.statusText === "Internal Server Error" ||
+            err.response.data.error === "getaddrinfo ENOTFOUND api.mailgun.net"
+          ) {
+            return dispatch(errorMessage("Try again later!!!"));
+          } else {
+            return dispatch(errorMessage("No internet connection!!"));
+          }
+        });
     }
   };
 
