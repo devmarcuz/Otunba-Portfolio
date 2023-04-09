@@ -34,10 +34,10 @@ const Portfolio = () => {
         <div className="gal">
           <div
             className="img"
-            style={{
-              width: `${getRandomSize()}`,
-              height: `${getRandomSize}`,
-            }}
+            // style={{
+            //   width: `${getRandomSize()}`,
+            //   height: `${getRandomSize}`,
+            // }}
           >
             <img
               src="/images/FreeFrames — Mozilla Firefox 4_3_2023 7_57_51 AM.png"

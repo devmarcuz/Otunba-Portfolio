@@ -21,7 +21,7 @@ const AuthorImgContainer = () => {
   return (
     <div className="author-img-container">
       <div className="img-border">
-        <img src="/images/pexels-mikotoraw-photographer-3639496.jpg" alt="" />
+        <img src="/images/otunbabg.jpg" alt="" />
       </div>
     </div>
   );

@@ -143,6 +143,10 @@ const Contact = () => {
         .then((res) => {
           setFormData({ ...formData, name: "", email: "", textValue: "" });
           dispatch(successMessage("Message succefully sent!!!"));
+          const timeout = setTimeout(() => {
+            dispatch(clearMessage());
+          }, Math.floor(Math.random() * 6000 + 1000));
+          return () => clearTimeout(timeout);
         })
         .catch((err) => {
           if (!err.response) {
@@ -181,6 +185,7 @@ const Contact = () => {
             onChange={handleChange}
             autoComplete="off"
             className={`${borderError1 && "border-error"}`}
+            value={name}
           />
         </div>
         <div className="label">
@@ -192,13 +197,14 @@ const Contact = () => {
             onChange={handleChange}
             autoComplete="off"
             className={`${borderError2 && "border-error"}`}
+            value={email}
           />
         </div>
         <div className="label">
           <label htmlFor="message">Your message</label>
           <textarea
             name="textValue"
-            // value={textValue}
+            value={textValue}
             id=""
             cols="30"
             rows="7"
