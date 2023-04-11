@@ -92,7 +92,7 @@ const About = () => {
         <h1>Me, Myself and I</h1>
         <p>
   For over 3 years, I have had the chance to work with a wide range of
-  <span>web technologies</span>, gathering valuable experience along the way.
+  <span> web technologies</span>, gathering valuable experience along the way.
   During this time, I have worked with both companies and individuals, learning
   from some truly talented and driven people.
   <br /><br />
