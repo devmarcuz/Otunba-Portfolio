@@ -91,13 +91,14 @@ const About = () => {
       <div className="left-content">
         <h1>Me, Myself and I</h1>
         <p>
-          For over a decade I had many opportunities to work in a vast spectrum
-          of <span>web technologies</span> which led me gather a significant
-          amount of various experience. Worked for companies and individuals,
-          and learnt from amazing and ambitious people.
-          <br /> <br />I currently work remotely with a selected freelance
-          client base open for new opportunities
-        </p>
+  For over 3 years, I have had the chance to work with a wide range of
+  <span>web technologies</span>, gathering valuable experience along the way.
+  During this time, I have worked with both companies and individuals, learning
+  from some truly talented and driven people.
+  <br /><br />
+  As of now, I am working remotely with a select group of freelance clients, but
+  I am always open to exploring new opportunities.
+</p>
       </div>
       <div className="right-content">
         <div className="drop-container">
