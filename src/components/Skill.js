@@ -8,11 +8,7 @@ const Skill = () => {
       <div className="left-content">
         <h1>Design</h1>
         <p>
-          I'm probably not the typical designer positioned behind an illustrator
-          artboard adjusting pixels, but I design. Immersed in stylesheets
-          tweaking font sizes and comtemplating layouts is where you'll find me.
-          I'm commited to creating fluent user experiences while staying
-          fashionable.
+          I design user interfaces by adjusting stylesheets and layouts for fluent user experiences while maintaining an attractive appearance.
         </p>
       </div>
       <div className="right-content">
