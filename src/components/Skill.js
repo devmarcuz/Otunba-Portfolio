@@ -15,10 +15,7 @@ const Skill = () => {
         <div className="content">
           <h1>Engineering</h1>
           <p>
-            In building software applications, I'm equipped with just the right
-            tools and can absolutely function independently of them to deliver
-            fast, resilient solutions optimized for scale performance and
-            scalability are priorities on my radar.
+            I have the necessary tools for building software applications and can work independently to deliver quick, reliable solutions. I prioritize scalability and performance when developing applications.
           </p>
         </div>
       </div>
