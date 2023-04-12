@@ -27,7 +27,7 @@ const LeftHomeSection = () => {
         </h1>
         <p className="info">
           Hello, I'm <span className="name-span" >Otunba-Marcus A. </span>I build clean, appealing and
-          functional interfaces which comply with the lastest standards and
+          functional interfaces which comply with the latest standards and
           great user experiences
         </p>
         <div className="skills">
