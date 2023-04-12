@@ -13,9 +13,7 @@ const Portfolio = () => {
       <h1>My Portfolio</h1>
       <div className="content">
         <p>
-          A small gallery of recent projects chosen by me. I've done them all
-          together with amazing from companies around the globe. It's only a
-          drop in the ocean compared to the entire list. <br />
+          This is a small gallery of recent projects that I have completed in collaboration with amazing companies from around the world. However, this is just a small sample compared to the extensive list of projects I have worked on. <br />
           Interested to see more more? Visited <Link to="/work">
             my work
           </Link>{" "}
