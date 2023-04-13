@@ -26,9 +26,9 @@ const LeftHomeSection = () => {
           <span>.</span>
         </h1>
         <p className="info">
-          Hello, I'm <span className="name-span" >Otunba-Marcus A. </span>I build clean, appealing and
-          functional interfaces which comply with the latest standards and
-          great user experiences
+          Hello, I'm <span className="name-span">Otunba-Marcus A. </span>I build
+          clean, appealing and functional interfaces which comply with the
+          latest standards and great user experiences
         </p>
         <div className="skills">
           <p className="skill">
@@ -36,7 +36,8 @@ const LeftHomeSection = () => {
             Engineering.
           </p>
           <p className="skill">
-            3+ years experienced software engineer skilled in multiple languages and frameworks, delivering high-quality solutions.
+            3+ years experienced software engineer skilled in multiple languages
+            and frameworks, delivering high-quality solutions.
           </p>
         </div>
       </div>

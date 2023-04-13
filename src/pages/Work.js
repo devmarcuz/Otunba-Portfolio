@@ -139,6 +139,38 @@ const Work = () => {
               </p>
             </a>
           </div>
+          <div className="project">
+            <img
+              src="/images/AskAI - Google Chrome 4_12_2023 5_45_10 PM.png"
+              alt=""
+            />
+            <div className="overlay"></div>
+            <div className="title-overlay">
+              <h3>AskAI</h3>
+              <p>
+                It allows users to ask questions and get responses by the AI.
+              </p>
+              <div className="technologies">
+                <div className="stack">
+                  <span>React.js</span> <span>OpenAI</span> <span>Node.js</span>{" "}
+                  <span>SASS</span>
+                </div>
+                <a href="https://github.com/devmarcuz/AskAI" target="blank">
+                  <FaGithubAlt className="git" />
+                </a>
+              </div>
+            </div>
+            <a
+              href="https://ask-ai-devmarcuz.vercel.app"
+              target="blank"
+              className="view"
+            >
+              <p>
+                VIEW
+                <br /> PROJECT
+              </p>
+            </a>
+          </div>
         </div>
       </section>
 
