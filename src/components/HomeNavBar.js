@@ -128,7 +128,7 @@ const HomeNavBar = ({ setMenuRepo, menuRepo, setActive, active }) => {
           </li> */}
           <li className={!active ? "active" : ""}>
             <a
-              href="https://drive.google.com/file/d/15GRR57zbU9Ga37RxaR_y2ls4DXke8-AF/view?usp=drivesdk"
+              href="https://drive.google.com/file/d/1FoJ5oBlRCw8VHfOTEcb92P-IycGhUYyE/view?usp=drivesdk"
               target="blank"
             >
               Resume
