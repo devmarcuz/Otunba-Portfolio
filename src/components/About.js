@@ -96,8 +96,7 @@ const About = () => {
   During this time, I have worked with both companies and individuals, learning
   from some truly talented and driven people.
   <br /><br />
-  As of now, I am working remotely with a select group of freelance clients, but
-  I am always open to exploring new opportunities.
+  As of now, I am actively seeking new job opportunities and I am open to working with clients on-site or remotely. I have experience working in various settings and I am excited to explore new opportunities and contribute my skills to a new team.
 </p>
       </div>
       <div className="right-content">
