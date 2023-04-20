@@ -10,6 +10,7 @@ import "../css/Contact.css";
 import { ErrorMessage, SuccessMessage } from "./Message";
 import axios from "axios";
 import isEmail from "validator/lib/isEmail";
+import Loading from "./Loading";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,20 +21,13 @@ const Contact = () => {
   const [borderError1, setBorderError1] = useState(false);
   const [borderError2, setBorderError2] = useState(false);
   const [borderError3, setBorderError3] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const { name, email, textValue } = formData;
 
   const { success, error } = useSelector((state) => state.messages);
 
   const dispatch = useDispatch();
-
-  const textArea = (e) => {
-    const text =
-      "Hi, I think we need a client-side system for our website at Company X. How soon can you hop on to discuss this?";
-    if (e.target.textContent === text) {
-      setFormData({ ...formData, textValue: "" });
-    }
-  };
 
   const api = "https://otunba-portfolio-backend.onrender.com";
 
@@ -98,6 +92,7 @@ const Contact = () => {
     setBorderError1(false);
     setBorderError2(false);
     setBorderError3(false);
+    setLoading(false);
   };
 
   const onSubmit = (e) => {
@@ -107,29 +102,35 @@ const Contact = () => {
       setBorderError1(true);
       setBorderError2(true);
       setBorderError3(true);
+      setLoading(false);
     }
 
     if (isEmpty(name)) {
       setBorderError1(true);
+      setLoading(false);
     }
 
     if (isEmpty(email) || !isEmail(email)) {
       setBorderError2(true);
+      setLoading(false);
     }
 
     if (!isEmail(email) && !isEmpty(email)) {
       dispatch(errorMessage("Invalid Email"));
+      setLoading(false);
       // dispatch(successMessage("sucess"));
     }
 
     if (isEmpty(textValue)) {
       setBorderError3(true);
+      setLoading(false);
     }
 
     if (!isEmpty(name) && !isEmpty(email) && !isEmpty(textValue)) {
       setBorderError1(false);
       setBorderError2(false);
       setBorderError3(false);
+      setLoading(false);
     }
 
     if (
@@ -138,10 +139,13 @@ const Contact = () => {
       !isEmpty(textValue) &&
       isEmail(email)
     ) {
+      setLoading(true);
+
       axios
         .post(`${api}/send-email`, { name, email, textValue })
         .then((res) => {
           setFormData({ ...formData, name: "", email: "", textValue: "" });
+          setLoading(false);
           dispatch(successMessage("Message succefully sent!!!"));
           const timeout = setTimeout(() => {
             dispatch(clearMessage());
@@ -149,8 +153,9 @@ const Contact = () => {
           return () => clearTimeout(timeout);
         })
         .catch((err) => {
+          setLoading(false);
           if (!err.response) {
-            return dispatch(errorMessage("No internet connection!!"));
+            return dispatch(errorMessage("No internet connection"));
           }
 
           if (err.response.data.error) {
@@ -161,7 +166,7 @@ const Contact = () => {
           ) {
             return dispatch(errorMessage("Try again later!!!"));
           } else {
-            return dispatch(errorMessage("No internet connection!!"));
+            return dispatch(errorMessage("No internet connection"));
           }
         });
     }
@@ -175,6 +180,7 @@ const Contact = () => {
       <form action="" onSubmit={onSubmit}>
         {error && <ErrorMessage error={error} />}
         {success && <SuccessMessage success={success} />}
+        {loading && <Loading />}
 
         <div className="label">
           <label htmlFor="name">Your name</label>

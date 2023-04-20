@@ -129,6 +129,33 @@ const Portfolio2 = () => {
               <div className="overlay"></div>
             </div>
           </div>
+          <div className="proj">
+            <h3>Ecommerce Platform API</h3>
+            <div className="stack">
+              <span>Node.js</span> <span>Express.js</span> <span>MongoDB</span>{" "}
+              <span>Stripe</span>
+            </div>
+            <p className="desc">
+              This is the backend for an ecommerce platform.
+            </p>
+            <div className="end">
+              <a
+                href="https://github.com/devmarcuz/ecommerce-platform-backend/blob/master/README.md"
+                target="blank"
+                className="view"
+              >
+                <AiOutlineGlobal /> <p>View</p>
+              </a>
+              <a
+                className="git-container"
+                href="https://github.com/devmarcuz/ecommerce-platform-backend"
+                target="blank"
+              >
+                <FaGithubAlt className="git" />
+              </a>
+              <div className="overlay"></div>
+            </div>
+          </div>
           {/* <div className="project">
             <img
               src="/images/FreeFrames — Mozilla Firefox 4_3_2023 7_57_51 AM.png"

@@ -171,6 +171,36 @@ const Work = () => {
               </p>
             </a>
           </div>
+          <div className="project">
+            <img src="/images/Postman 4_21_2023 12_11_17 AM.png" alt="" />
+            <div className="overlay"></div>
+            <div className="title-overlay">
+              <h3>Ecommerce Platform API</h3>
+              <p>This is the backend for an ecommerce platform.</p>
+              <div className="technologies">
+                <div className="stack">
+                  <span>Node.js</span> <span>Express.js</span>{" "}
+                  <span>MongoDB</span> <span>Stripe</span>
+                </div>
+                <a
+                  href="https://github.com/devmarcuz/ecommerce-platform-backend"
+                  target="blank"
+                >
+                  <FaGithubAlt className="git" />
+                </a>
+              </div>
+            </div>
+            <a
+              href="https://github.com/devmarcuz/ecommerce-platform-backend/blob/master/README.md"
+              target="blank"
+              className="view"
+            >
+              <p>
+                VIEW
+                <br /> PROJECT
+              </p>
+            </a>
+          </div>
         </div>
       </section>
 
