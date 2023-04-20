@@ -12,6 +12,7 @@ import Contact from "../components/Contact";
 import "../css/Home.css";
 import "../css/Main.css";
 import Footer from "../components/Footer";
+import Portfolio2 from "../components/Portfolio2";
 
 const Home = ({ showAnimation, setShowAnimation }) => {
   const [menuRepo, setMenuRepo] = useState(false);
@@ -106,7 +107,8 @@ const Home = ({ showAnimation, setShowAnimation }) => {
       <MenuReponsive setMenuRepo={setMenuRepo} menuRepo={menuRepo} />
       <Skill />
       <About />
-      <Portfolio />
+      {/* <Portfolio /> */}
+      <Portfolio2 />
       {/* <BlogComponent /> */}
       <Contact />
       <Footer />

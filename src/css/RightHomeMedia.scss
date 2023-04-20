@@ -1,6 +1,5 @@
 .left-home-media {
   background: var(--background-yellow);
-  height: 60vh;
   width: 100%;
   display: none;
   padding: 50px;
@@ -17,19 +16,19 @@
 
 @media screen and (min-width: 550px) {
   .left-home-media {
-    height: 60vh;
+    // height: 60vh;
   }
 }
 
 @media screen and (max-width: 500px) {
   .left-home-media {
-    height: 35vh;
+    // height: 35vh;
   }
 }
 
 @media screen and (max-width: 400px) {
   .left-home-media {
-    padding: 0px;
-    height: 40vh;
+    padding: 50px;
+    // height: 40vh;
   }
 }

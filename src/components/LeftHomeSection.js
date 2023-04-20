@@ -36,8 +36,8 @@ const LeftHomeSection = () => {
             Engineering.
           </p>
           <p className="skill">
-            3+ years experienced software engineer skilled in multiple languages
-            and frameworks, delivering high-quality solutions.
+            Skilled software developer with 3+ years of experience delivering
+            high-quality solutions using multiple languages and frameworks.
           </p>
         </div>
       </div>
