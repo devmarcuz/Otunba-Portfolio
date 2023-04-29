@@ -91,13 +91,17 @@ const About = () => {
       <div className="left-content">
         <h1>Me, Myself and I</h1>
         <p>
-  For over 3 years, I have had the chance to work with a wide range of
-  <span> web technologies</span>, gathering valuable experience along the way.
-  During this time, I have worked with both companies and individuals, learning
-  from some truly talented and driven people.
-  <br /><br />
-  As of now, I am actively seeking new job opportunities and I am open to working with clients on-site or remotely. I have experience working in various settings and I am excited to explore new opportunities and contribute my skills to a new team.
-</p>
+          For over 3 years, I have had the chance to work with a wide range of
+          <span> web technologies</span>, gathering valuable experience along
+          the way. During this time, I have worked with both companies and
+          individuals, learning from some truly talented and driven people.
+          <br />
+          <br />
+          As of now, I am actively seeking new job opportunities and I am open
+          to working with clients on-site or remotely. I have experience working
+          in various settings and I am excited to explore new opportunities and
+          contribute my skills to a new team.
+        </p>
       </div>
       <div className="right-content">
         <div className="drop-container">
@@ -221,49 +225,21 @@ const About = () => {
           </div>
           {drop4 && (
             <div className="content">
-              <div className="tech">
-                <div className="container">
-                  <div className="text">
-                    <p>Teamwork</p> <AiOutlineTeam className="icon" />
-                  </div>
-                  <p className="rate">85%</p>
+              <div className="tech-stack">
+                <div className="text">
+                  <AiOutlineTeam className="icon-tech" /> <p>Teamwork</p>
                 </div>
-                <div className="range">
-                  <div className="bar"></div>
+                <div className="text">
+                  <AiOutlineSolution className="icon-tech" />
+                  <p>Problem Solving</p>{" "}
                 </div>
-              </div>
-              <div className="tech">
-                <div className="container">
-                  <div className="text">
-                    <p>Problem Solving</p>{" "}
-                    <AiOutlineSolution className="icon" />
-                  </div>
-                  <p className="rate">90%</p>
+                <div className="text">
+                  <RiTeamFill className="icon-tech" />
+                  <p>Communication Skill</p>{" "}
                 </div>
-                <div className="range">
-                  <div className="bar"></div>
-                </div>
-              </div>
-              <div className="tech">
-                <div className="container">
-                  <div className="text">
-                    <p>Communication Skill</p> <RiTeamFill className="icon" />
-                  </div>
-                  <p className="rate">65%</p>
-                </div>
-                <div className="range">
-                  <div className="bar"></div>
-                </div>
-              </div>
-              <div className="tech">
-                <div className="container">
-                  <div className="text">
-                    <p>Presentation Skill</p> <SiSlideshare className="icon" />
-                  </div>
-                  <p className="rate">70%</p>
-                </div>
-                <div className="range">
-                  <div className="bar"></div>
+                <div className="text">
+                  <SiSlideshare className="icon-tech" />
+                  <p>Presentation Skill</p>{" "}
                 </div>
               </div>
             </div>
