@@ -12,7 +12,7 @@ import axios from "axios";
 import isEmail from "validator/lib/isEmail";
 import Loading from "./Loading";
 
-const Contact = () => {
+const Contact = ({ contactRef }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -173,7 +173,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact" onClick={contactArea}>
+    <div className="contact" onClick={contactArea} ref={contactRef}>
       <h1>Send me a message!</h1>
       <p>Got a question or proposal, or just want to say hello? Go ahead.</p>
 

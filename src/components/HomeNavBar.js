@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable react-hooks/exhaustive-deps */
-
 import React, { useEffect, useState } from "react";
 import "../css/HomeNavBar.css";
 import {
@@ -121,7 +118,8 @@ const HomeNavBar = ({ setMenuRepo, menuRepo, setActive, active }) => {
 
         <ul className={active ? `menu-list active` : `menu-list`}>
           <li className={!active ? "active" : ""}>
-            <Link to={work ? "/" : "/work"}>{work ? "Home" : "Work"}</Link>
+            <Link to="/?section=work">Work</Link>
+            {/* <Link to={work ? "/" : "/work"}>{work ? "Home" : "Work"}</Link> */}
           </li>
           {/* <li className={!active ? "active" : ""}>
             <Link to={blog ? "/" : "/shelf"}>{blog ? "Home" : "Blog"}</Link>
@@ -135,7 +133,7 @@ const HomeNavBar = ({ setMenuRepo, menuRepo, setActive, active }) => {
             </a>
           </li>
           <li className={!active ? "active" : ""}>
-            <Link to="/?scrollToContact=true">Contact</Link>
+            <Link to="/?section=contact">Contact</Link>
           </li>
           <div className={!active ? "socials active" : "socials"}>
             <a

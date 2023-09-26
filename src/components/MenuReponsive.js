@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-
 import React, { useEffect, useState } from "react";
 import HomeNavResponsive from "./HomeNavResponsive";
 import "../css/MenuResponsive.css";
@@ -64,7 +62,10 @@ const MenuReponsive = ({ setMenuRepo, menuRepo }) => {
       <div className={active ? `menu-list active` : `menu-list`}>
         <ul>
           <li className={active ? "active" : ""}>
-            <Link to={work ? "/" : "/work"}>{work ? "Home" : "Work"}</Link>
+            <Link to="/?section=work" onClick={() => setMenuRepo(false)}>
+              Work
+            </Link>
+            {/* <Link to={work ? "/" : "/work"}>{work ? "Home" : "Work"}</Link> */}
           </li>
           <li className={active ? "active" : ""}>
             <a
@@ -75,7 +76,10 @@ const MenuReponsive = ({ setMenuRepo, menuRepo }) => {
             </a>
           </li>
           <li className={active ? "active" : ""}>
-            <Link to="/?scrollToContact=true">Contact</Link>
+            <Link to="/?section=contact" onClick={() => setMenuRepo(false)}>
+              Contact
+            </Link>
+            {/* <Link to="/?scrollToContact=true">Contact</Link> */}
           </li>
           <div className={active ? "socials active" : "socials"}>
             <a

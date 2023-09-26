@@ -4,9 +4,9 @@ import { AiOutlineGlobal } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "../css/Portfolio2.css";
 
-const Portfolio2 = () => {
+const Portfolio2 = ({ workRef }) => {
   return (
-    <div className="portofolio-section">
+    <div className="portofolio-section" ref={workRef}>
       <div className="letter">Work</div>
       <h1>My Portfolio</h1>
       <div className="content">
@@ -20,6 +20,83 @@ const Portfolio2 = () => {
       </div>
       <section>
         <div className="projects">
+          <div className="proj">
+            <h3>getLinked</h3>
+            <div className="stack">
+              <span>React.js</span> <span>SCSS</span> <span>API</span>
+            </div>
+            <p className="desc">
+              This project was built during a hackathon challenge
+            </p>
+            <div className="end">
+              <a
+                href="https://getlink-tech-hackathon-marcuz.vercel.app"
+                target="blank"
+                className="view"
+              >
+                <AiOutlineGlobal /> <p>View</p>
+              </a>
+              <a
+                className="git-container"
+                href="https://github.com/devmarcuz/getlink-tech-hackathon"
+                target="blank"
+              >
+                <FaGithubAlt className="git" />
+              </a>
+              <div className="overlay"></div>
+            </div>
+          </div>
+          <div className="proj">
+            <h3>Gifttage Corner</h3>
+            <div className="stack">
+              <span>React.js</span> <span>SCSS</span> <span>Firebase</span>
+            </div>
+            <p className="desc">
+              Explore insightful articles, vlogs, and content on topics ranging
+              from relationships, faith, lifestyle, and more on the blog
+            </p>
+            <div className="end">
+              <a
+                href="https://gifttage-corner.vercel.app"
+                target="blank"
+                className="view"
+              >
+                <AiOutlineGlobal /> <p>View</p>
+              </a>
+              <a
+                className="git-container"
+                href="https://github.com/devmarcuz/gifttage-corner-blog"
+                target="blank"
+              >
+                <FaGithubAlt className="git" />
+              </a>
+              <div className="overlay"></div>
+            </div>
+          </div>
+          <div className="proj">
+            <h3>Eazipay</h3>
+            <div className="stack">
+              <span>React.js</span> <span>SCSS</span>
+            </div>
+            <p className="desc">This project was built for a job interview</p>
+            <div className="end">
+              <a
+                href="https://eazipay-frontend-i5fk.vercel.app"
+                target="blank"
+                className="view"
+              >
+                <AiOutlineGlobal /> <p>View</p>
+              </a>
+              <a
+                className="git-container"
+                href="https://github.com/devmarcuz/eazipay-frontend"
+                target="blank"
+              >
+                <FaGithubAlt className="git" />
+              </a>
+              <div className="overlay"></div>
+            </div>
+          </div>
           <div className="proj">
             <h3>FreeFrames</h3>
             <div className="stack">

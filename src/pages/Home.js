@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import About from "../components/About";
 import HomeNavBar from "../components/HomeNavBar";
@@ -17,6 +17,9 @@ import Portfolio2 from "../components/Portfolio2";
 const Home = ({ showAnimation, setShowAnimation }) => {
   const [menuRepo, setMenuRepo] = useState(false);
   const [active, setActive] = useState(false);
+
+  const workRef = useRef();
+  const contactRef = useRef();
 
   const location = useLocation();
 
@@ -81,6 +84,23 @@ const Home = ({ showAnimation, setShowAnimation }) => {
     }
   }, [location]);
 
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const section = params.get("section");
+
+    if (section === "work" && workRef.current) {
+      workRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+
+    if (section === "contact" && contactRef.current) {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+
+    // if (section === "introductions" && introductionRef.current) {
+    //   introductionRef.current.scrollIntoView({ behavior: "smooth" });
+    // }
+  }, [location.search]);
+
   return (
     <div className="home" onClick={navigation}>
       {showAnimation && (
@@ -108,9 +128,9 @@ const Home = ({ showAnimation, setShowAnimation }) => {
       <Skill />
       <About />
       {/* <Portfolio /> */}
-      <Portfolio2 />
+      <Portfolio2 workRef={workRef} />
       {/* <BlogComponent /> */}
-      <Contact />
+      <Contact contactRef={contactRef} />
       <Footer />
     </div>
   );
