@@ -3,18 +3,17 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background: rgb(255, 208, 0);
   z-index: 10000;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  height: 12vh;
 }
 .home-nav.location {
   background: transparent;
 }
 .home-nav .logo {
   flex: 0.6;
-  background-color: black;
   color: var(--background-yellow);
   padding-left: 70px;
   padding-right: 50px;
@@ -57,7 +56,7 @@
   justify-content: right;
   position: relative;
   z-index: 100;
-  margin-top: 30px;
+  padding-top: 35px;
 }
 .home-nav .menu.location {
   background: transparent;

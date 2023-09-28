@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import About from "../components/About";
 import HomeNavBar from "../components/HomeNavBar";
 import LeftHomeSection from "../components/LeftHomeSection";
@@ -13,15 +13,21 @@ import "../css/Home.css";
 import "../css/Main.css";
 import Footer from "../components/Footer";
 import Portfolio2 from "../components/Portfolio2";
+import { GoHome } from "react-icons/go";
+import { CiUser } from "react-icons/ci";
+import { MdWorkspacesOutline, MdImportContacts } from "react-icons/md";
 
 const Home = ({ showAnimation, setShowAnimation }) => {
   const [menuRepo, setMenuRepo] = useState(false);
   const [active, setActive] = useState(false);
+  const [fixedNav, setFixedNav] = useState(false);
 
   const workRef = useRef();
   const contactRef = useRef();
+  const aboutRef = useRef();
 
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (showAnimation)
@@ -69,9 +75,11 @@ const Home = ({ showAnimation, setShowAnimation }) => {
       const nav = document.querySelector(".home-nav");
       window.addEventListener("scroll", () => {
         if (window.scrollY !== 0) {
+          setFixedNav(true);
           nav.classList.add("scroll");
         } else {
           nav.classList.remove("scroll");
+          setFixedNav(false);
         }
       });
     }
@@ -96,9 +104,9 @@ const Home = ({ showAnimation, setShowAnimation }) => {
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
 
-    // if (section === "introductions" && introductionRef.current) {
-    //   introductionRef.current.scrollIntoView({ behavior: "smooth" });
-    // }
+    if (section === "about" && aboutRef.current) {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   }, [location.search]);
 
   return (
@@ -126,11 +134,33 @@ const Home = ({ showAnimation, setShowAnimation }) => {
       </main>
       <MenuReponsive setMenuRepo={setMenuRepo} menuRepo={menuRepo} />
       <Skill />
-      <About />
+      <About aboutRef={aboutRef} />
       {/* <Portfolio /> */}
       <Portfolio2 workRef={workRef} />
       {/* <BlogComponent /> */}
       <Contact contactRef={contactRef} />
+      <div className={`fixed-nav ${fixedNav && "activate"}`}>
+        <span
+          onClick={() => {
+            navigate("/");
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
+        >
+          <GoHome />
+        </span>
+        <span onClick={() => navigate("/?section=about")}>
+          <CiUser />
+        </span>
+        <span onClick={() => navigate("/?section=work")}>
+          <MdWorkspacesOutline />
+        </span>
+        <span onClick={() => navigate("/?section=contact")}>
+          <MdImportContacts />
+        </span>
+      </div>
       <Footer />
     </div>
   );

@@ -3,9 +3,9 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background: rgb(255, 208, 0);
   z-index: 10000;
   user-select: none;
+  height: 12vh;
 
   &.location {
     background: transparent;
@@ -28,7 +28,6 @@
 
   .logo {
     flex: 0.6;
-    background-color: black;
     color: var(--background-yellow);
     padding-left: 70px;
     padding-right: 50px;
@@ -70,7 +69,7 @@
     justify-content: right;
     position: relative;
     z-index: 100;
-    margin-top: 30px;
+    padding-top: 35px;
 
     &.location {
       background: transparent;

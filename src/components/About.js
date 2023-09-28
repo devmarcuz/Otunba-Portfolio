@@ -26,7 +26,7 @@ import { AiOutlineSolution, AiOutlineTeam } from "react-icons/ai";
 import { RiTeamFill } from "react-icons/ri";
 import { GiRelationshipBounds } from "react-icons/gi";
 
-const About = () => {
+const About = ({ aboutRef }) => {
   const [drop1, setDrop1] = useState(false);
   const [drop2, setDrop2] = useState(false);
   const [drop3, setDrop3] = useState(false);
@@ -87,7 +87,7 @@ const About = () => {
   };
 
   return (
-    <div className="about-section">
+    <div className="about-section" ref={aboutRef}>
       <div className="left-content">
         <h1>Me, Myself and I</h1>
         <p>

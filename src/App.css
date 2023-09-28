@@ -9,6 +9,7 @@
 body {
   font-family: poppins;
   height: 100vh;
+  background: black;
 }
 
 :root {
