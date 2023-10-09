@@ -15,7 +15,7 @@
 .home-nav .logo {
   flex: 0.6;
   color: var(--background-yellow);
-  padding-left: 70px;
+  padding-left: 100px;
   padding-right: 50px;
   display: flex;
   align-items: center;
@@ -23,6 +23,12 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+@media screen and (min-width: 1050px) {
+  .home-nav .logo {
+    padding-left: 200px;
+    padding-right: 0;
+  }
 }
 .home-nav .logo.location {
   background: transparent;
@@ -33,14 +39,27 @@
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  width: 75px;
+  overflow: hidden;
+  transform-origin: right;
+  transition: 0.3s all ease;
+}
+.home-nav .logo .h2.no-wrap {
+  width: 350px;
 }
 .home-nav .logo .h2 h2 {
   cursor: pointer;
   padding-top: 30px;
-  font-size: 26px;
+  font-size: 20px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  display: block;
+  text-wrap: nowrap;
+  transition: 0.5s all ease;
+}
+.home-nav .logo .h2 h2.wrap {
+  transform: translateX(-22%);
 }
 .home-nav .logo .h2.location {
   background: transparent;
@@ -52,11 +71,16 @@
   background: rgb(255, 208, 0);
   height: 100%;
   display: flex;
-  padding-right: 70px;
+  padding-right: 100px;
   justify-content: right;
   position: relative;
   z-index: 100;
   padding-top: 35px;
+}
+@media screen and (min-width: 1050px) {
+  .home-nav .menu {
+    padding-right: 200px;
+  }
 }
 .home-nav .menu.location {
   background: transparent;
@@ -111,7 +135,7 @@
 .home-nav .menu .menu-list {
   position: absolute;
   top: 0;
-  right: 9%;
+  right: 22%;
   width: 0px;
   height: 0px;
   background: var(--bg-light-yellow);

@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import About from "../components/About";
+import About from "../components/About2";
 import HomeNavBar from "../components/HomeNavBar";
 import LeftHomeSection from "../components/LeftHomeSection";
 import MenuReponsive from "../components/MenuReponsive";
-import Portfolio from "../components/Portfolio";
+// import Portfolio from "../components/Portfolio";
 import RightHomeMedia from "../components/RightHomeMedia";
 import RightHomeSection from "../components/RightHomeSection";
 import Skill from "../components/Skill";
@@ -25,6 +25,7 @@ const Home = ({ showAnimation, setShowAnimation }) => {
   const workRef = useRef();
   const contactRef = useRef();
   const aboutRef = useRef();
+  const skillRef = useRef();
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -109,6 +110,18 @@ const Home = ({ showAnimation, setShowAnimation }) => {
     }
   }, [location.search]);
 
+  // useEffect(() => {
+  //   document.addEventListener("mousemove", (e) => {
+  //     const height = circle.offsetHeight;
+  //     const width = circle.offsetWidth;
+
+  //     setTimeout(() => {
+  //       circle.style.left = `${e.pageX - width / 2}px`;
+  //       circle.style.top = `${e.pageY - height / 2}px`;
+  //     }, 20);
+  //   });
+  // }, []);
+
   return (
     <div className="home" onClick={navigation}>
       {showAnimation && (
@@ -133,8 +146,8 @@ const Home = ({ showAnimation, setShowAnimation }) => {
         <RightHomeMedia />
       </main>
       <MenuReponsive setMenuRepo={setMenuRepo} menuRepo={menuRepo} />
-      <Skill />
-      <About aboutRef={aboutRef} />
+      <Skill skillRef={skillRef} />
+      <About aboutRef={aboutRef} skillRef={skillRef} />
       {/* <Portfolio /> */}
       <Portfolio2 workRef={workRef} />
       {/* <BlogComponent /> */}

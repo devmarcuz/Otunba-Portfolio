@@ -1,9 +1,28 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../css/AuthorImgContainer.css";
+import { useAnimation, motion } from "framer-motion";
 
 const AuthorImgContainer = () => {
   const location = useLocation();
+
+  const animation = useAnimation();
+  const [position, setPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      const x = event.clientX - 100;
+      const y = event.clientY - 100;
+
+      setPosition({ x, y });
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   useEffect(() => {
     if (location.pathname === "/") {

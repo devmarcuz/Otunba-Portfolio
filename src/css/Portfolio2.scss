@@ -9,6 +9,10 @@
     -webkit-text-stroke-color: var(--background-yellow);
     font-size: 50px;
     padding-left: 120px;
+
+    @media screen and (min-width: 1050px) {
+      padding: 0 200px;
+    }
   }
 
   .content {
@@ -16,9 +20,25 @@
     padding-right: 120px;
     padding-top: 30px;
 
+    @media screen and (min-width: 1050px) {
+      padding: 0 200px;
+      padding-top: 30px;
+    }
+
     p {
       color: var(--text-color);
       font-size: 16px;
+      background: linear-gradient(
+        45deg,
+        #dfeefd,
+        #ebe9fe,
+        #f4faf1,
+        #e0f8ff,
+        #eaebfc
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
 
       a {
         color: var(--background-yellow);
@@ -36,6 +56,10 @@
     width: 100%;
     padding: 100px 100px;
     padding-left: 120px;
+
+    @media screen and (min-width: 1050px) {
+      padding: 100px 200px;
+    }
 
     .projects {
       display: grid;
@@ -288,12 +312,26 @@
   .letter {
     position: absolute;
     top: -13%;
-    right: -29%;
+    right: -20%;
     font-size: 25em;
     color: rgb(82, 81, 81);
     opacity: 0.1;
     font-weight: 700;
     user-select: none;
+    color: black;
+    background: linear-gradient(
+      45deg,
+      #dfeefd,
+      #ebe9fe,
+      #f4faf1,
+      #e0f8ff,
+      #eaebfc
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: rgb(255, 200, 0);
+    opacity: 0.2;
   }
 }
 

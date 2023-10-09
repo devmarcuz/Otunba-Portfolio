@@ -170,7 +170,7 @@
 }
 @media screen and (min-width: 1071px) {
   main {
-    height: 100vh;
+    height: 90vh;
   }
 }
 @keyframes move-left {

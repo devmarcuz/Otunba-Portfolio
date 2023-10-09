@@ -29,12 +29,17 @@
   .logo {
     flex: 0.6;
     color: var(--background-yellow);
-    padding-left: 70px;
+    padding-left: 100px;
     padding-right: 50px;
     display: flex;
     align-items: center;
     justify-content: left;
     user-select: none;
+
+    @media screen and (min-width: 1050px) {
+      padding-left: 200px;
+      padding-right: 0;
+    }
 
     &.location {
       background: transparent;
@@ -44,12 +49,27 @@
     .h2 {
       color: var(--background-yellow);
       user-select: none;
+      width: 75px;
+      overflow: hidden;
+      transform-origin: right;
+      transition: 0.3s all ease;
+
+      &.no-wrap {
+        width: 350px;
+      }
 
       h2 {
         cursor: pointer;
         padding-top: 30px;
-        font-size: 26px;
+        font-size: 20px;
         user-select: none;
+        display: block;
+        text-wrap: nowrap;
+        transition: 0.5s all ease;
+
+        &.wrap {
+          transform: translateX(-22%);
+        }
       }
 
       &.location {
@@ -65,11 +85,15 @@
     background: rgb(255, 208, 0);
     height: 100%;
     display: flex;
-    padding-right: 70px;
+    padding-right: 100px;
     justify-content: right;
     position: relative;
     z-index: 100;
     padding-top: 35px;
+
+    @media screen and (min-width: 1050px) {
+      padding-right: 200px;
+    }
 
     &.location {
       background: transparent;
@@ -132,7 +156,7 @@
     .menu-list {
       position: absolute;
       top: 0;
-      right: 9%;
+      right: 22%;
       width: 0px;
       height: 0px;
       background: var(--bg-light-yellow);

@@ -1,6 +1,7 @@
 .skill-section {
   width: 100%;
   background: rgb(165, 165, 165);
+  background: #16161a;
   display: flex;
   padding: 60px 0;
   padding-left: 120px;
@@ -8,39 +9,79 @@
   justify-content: space-between;
   position: relative;
 
+  @media screen and (min-width: 1050px) {
+    padding: 60px 200px;
+  }
+
   .letter {
     font-size: 20em;
     position: absolute;
     left: 50%;
     top: 50%;
     font-weight: 700;
-    color: rgb(155, 155, 155);
     transform: translate(-50%, -50%);
     user-select: none;
+    color: black;
+    background: linear-gradient(
+      45deg,
+      #dfeefd,
+      #ebe9fe,
+      #f4faf1,
+      #e0f8ff,
+      #eaebfc
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-stroke-color: rgb(255, 200, 0);
+    opacity: 0.2;
   }
 
   .left-content {
     width: 40%;
-    height: 100%;
     z-index: 1;
   }
 
   .right-content {
     width: 40%;
-    height: 100%;
     display: flex;
     align-items: flex-end;
     z-index: 1;
   }
 
   h1 {
-    font-size: 40px;
+    font-size: 70px;
     color: black;
+    background: linear-gradient(
+      45deg,
+      #dfeefd,
+      #ebe9fe,
+      #f4faf1,
+      #e0f8ff,
+      #eaebfc
+    );
+    -webkit-background-clip: text; /* For Webkit/Blink browsers like Chrome and Safari */
+    background-clip: text;
+    color: transparent;
+
+    &.remove-cursor {
+      cursor: none;
+    }
   }
 
   p {
-    font-size: 16px;
-    padding-top: 5px;
+    color: black;
+    background: linear-gradient(
+      45deg,
+      #dfeefd,
+      #ebe9fe,
+      #f4faf1,
+      #e0f8ff,
+      #eaebfc
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
 
@@ -56,7 +97,6 @@
     .letter {
       font-size: 18em;
       font-weight: 700;
-      color: rgb(155, 155, 155);
     }
   }
 }
@@ -77,7 +117,6 @@
     .letter {
       font-size: 16em;
       font-weight: 700;
-      color: rgb(155, 155, 155);
     }
   }
 }
@@ -90,14 +129,13 @@
     .letter {
       font-size: 14em;
       font-weight: 700;
-      color: rgb(155, 155, 155);
     }
   }
 }
 
 @media screen and (min-width: 1000px) {
   .skill-section {
-    height: 70vh;
+    height: 50vh;
   }
 }
 
@@ -107,7 +145,7 @@
     padding-right: 40px;
 
     h1 {
-      font-size: 28px;
+      font-size: 35px;
     }
 
     p {
@@ -117,7 +155,6 @@
     .letter {
       font-size: 13em;
       font-weight: 700;
-      color: rgb(155, 155, 155);
     }
   }
 }
@@ -125,7 +162,7 @@
 @media screen and (max-width: 400px) {
   .skill-section {
     h1 {
-      font-size: 25px;
+      font-size: 35px;
     }
   }
 }

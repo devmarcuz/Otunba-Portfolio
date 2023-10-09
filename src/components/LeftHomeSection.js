@@ -26,18 +26,18 @@ const LeftHomeSection = () => {
           <span>.</span>
         </h1>
         <p className="info">
-          Hello, I'm <span className="name-span">Otunba-Marcus A. </span>I build
-          clean, appealing and functional interfaces which comply with the
-          latest standards and great user experiences
+          Hello, I'm <span className="name-span">Otunba-Marcus A.</span> I craft
+          sleek and intuitive interfaces to ensure an exceptional user
+          experience.
         </p>
         <div className="skills">
           <p className="skill">
-            Highly skilled at progressive enhancement, design systems & UI
-            Engineering.
+            Experienced in progressive enhancement, design systems, and UI
+            development.
           </p>
           <p className="skill">
-            Skilled software developer with 3+ years of experience delivering
-            high-quality solutions using multiple languages and frameworks.
+            Over 3 years experienced software developer proficient in multiple
+            languages and frameworks.
           </p>
         </div>
       </div>

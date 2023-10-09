@@ -6,10 +6,16 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: rgba(255, 208, 0, 0.088);
+}
+
 body {
   font-family: poppins;
   height: 100vh;
   background: black;
+  overscroll-behavior-y: none;
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -29,4 +35,29 @@ a {
 .overflow {
   overflow: hidden;
   height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, rgb(116, 95, 0));
+  border-radius: 6px;
+}
+
+body.remove-mouse {
+  cursor: none;
+  /* The cursor property hides the default cursor */
+}
+
+/* Create a circular cursor */
+body.remove-mouse::before {
+  content: "";
+  position: absolute;
+  width: 20px; /* Adjust the size as needed */
+  height: 20px; /* Adjust the size as needed */
+  border: 2px solid #000; /* Color of the circle */
+  border-radius: 50%; /* Makes it a circle */
+  pointer-events: none; /* Prevents cursor from interfering with content */
 }

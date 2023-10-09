@@ -5,7 +5,11 @@
   padding: 100px 0;
   padding-bottom: 50px;
   padding-left: 120px;
+  position: relative;
   padding-right: 80px;
+}
+.about-section.about-fixed {
+  justify-content: flex-end;
 }
 @media screen and (min-width: 1050px) {
   .about-section {
@@ -16,6 +20,13 @@
 .about-section .left-content {
   width: 50%;
   padding-right: 150px;
+  transition: 15s top ease;
+}
+.about-section .left-content.left-fixed {
+  position: fixed;
+  width: 40%;
+  top: 0px;
+  left: 200px;
 }
 .about-section .left-content h1 {
   -webkit-text-stroke: 0.5px;
@@ -39,129 +50,83 @@
   width: 50%;
   padding-top: 30px;
   color: var(--background-yellow);
-  opacity: 0.6;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  position: relative;
 }
-.about-section .right-content .drop-container {
-  width: 100%;
-}
-.about-section .right-content .drop-container .drop {
-  width: 100%;
+.about-section .right-content .skills {
   display: flex;
-  align-items: center;
-  margin-bottom: 30px;
+  flex-direction: column;
 }
-.about-section .right-content .drop-container .drop .font-title {
-  font-size: 40px;
-  margin-right: 20px;
-}
-.about-section .right-content .drop-container .drop .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 70%;
-  cursor: pointer;
-}
-.about-section .right-content .drop-container .drop .container .main p {
-  opacity: 0.6;
-}
-.about-section .right-content .drop-container .drop .container .caret {
-  cursor: pointer;
-}
-.about-section .right-content .drop-container .drop .container .caret .anime-in {
-  animation: anime-in 0.4s forwards ease-in-out;
-}
-.about-section .right-content .drop-container .drop .container .caret .anime-out {
-  animation: anime-out 0.4s forwards ease-in-out;
-}
-.about-section .right-content .drop-container .content {
-  margin-left: 60px;
-  margin-bottom: 20px;
-  width: 70%;
-}
-.about-section .right-content .drop-container .content .tech {
-  width: 90%;
-  margin: auto;
-}
-@media screen and (max-width: 500px) {
-  .about-section .right-content .drop-container .content .tech {
-    width: 100%;
-  }
-}
-.about-section .right-content .drop-container .content .tech .container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.about-section .right-content .drop-container .content .tech .container .text {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.about-section .right-content .drop-container .content .tech .container .text p {
-  padding-right: 10px;
-}
-.about-section .right-content .drop-container .content .tech .container .text .icon {
-  font-size: 20px;
-}
-.about-section .right-content .drop-container .content .tech .range {
-  width: 100%;
-  height: 5px;
-  background: rgb(66, 66, 66);
-  border-radius: 5px;
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-.about-section .right-content .drop-container .content .tech .range .bar {
-  height: 5px;
-  border-radius: 5px;
-  background: gold;
-}
-.about-section .right-content .drop-container .content .tech-stack {
-  width: 90%;
+.about-section .right-content .skills .skill {
+  font-size: 16px;
+  margin: 8px 0;
   background: var(--background-yellow);
-  padding: 15px;
-  margin: auto;
-}
-@media screen and (max-width: 500px) {
-  .about-section .right-content .drop-container .content .tech-stack {
-    width: 100%;
-  }
-}
-.about-section .right-content .drop-container .content .tech-stack .text {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  padding: 8px 12px;
+  border-radius: 4px;
   color: black;
-  padding-bottom: 10px;
+  transform: translateY(0);
+  transition: transform 0.2s ease-in-out;
+  position: relative;
+  width: 100px;
+  text-align: center;
+  z-index: 100;
 }
-.about-section .right-content .drop-container .content .tech-stack .text p {
-  padding-left: 10px;
-  font-weight: 600;
+.about-section .right-content .skills .skill:nth-child(1) {
+  top: 10%;
+  left: 10%;
+  background-color: blue;
 }
-.about-section .right-content .drop-container .content .tech-stack .text .icon-tech {
-  font-size: 20px;
+.about-section .right-content .skills .skill:nth-child(2) {
+  top: 30%;
+  left: 30%;
+  background-color: red;
+}
+.about-section .right-content .skills .skill:nth-child(3) {
+  top: 50%;
+  left: 50%;
+  background-color: green;
+}
+.about-section .right-content .skills .skill:nth-child(4) {
+  top: 70%;
+  left: 70%;
+  background-color: yellow;
+}
+.about-section .right-content .skills .skill:nth-child(5) {
+  top: 90%;
+  left: 90%;
+  background-color: purple;
+}
+.about-section .right-content .skills .skill:nth-child(6) {
+  top: 20%;
+  left: 70%;
+  background-color: orange;
+}
+.about-section .right-content .skills .skill:nth-child(7) {
+  top: 40%;
+  left: 20%;
+  background-color: pink;
+}
+.about-section .right-content .skills .skill:nth-child(8) {
+  top: 60%;
+  left: 80%;
+  background-color: brown;
+}
+.about-section .right-content .skills .skill:nth-child(9) {
+  top: 80%;
+  left: 40%;
+  background-color: teal;
+}
+.about-section .right-content .skills .skill:nth-child(10) {
+  top: 90%;
+  left: 10%;
+  background-color: cyan;
+}
+.about-section .right-content .container-anima {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
 }
 
-@keyframes anime-out {
-  0% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-@keyframes anime-in {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(180deg);
-  }
-}
 @media screen and (max-width: 1070px) {
   .about-section {
     flex-direction: column;
@@ -252,4 +217,4 @@
   .about-section .right-content .drop-container .content .tech .container .rate {
     font-size: 14px;
   }
-}/*# sourceMappingURL=About.css.map */
+}/*# sourceMappingURL=About2.css.map */

@@ -11,6 +11,11 @@
      -moz-user-select: none;
           user-select: none;
 }
+@media screen and (min-width: 1050px) {
+  .right-home {
+    padding-right: 200px;
+  }
+}
 .right-home .shapes {
   display: flex;
   align-items: center;

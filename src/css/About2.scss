@@ -6,7 +6,12 @@
   padding: 100px 0;
   padding-bottom: 50px;
   padding-left: 120px;
+  position: relative;
   padding-right: 80px;
+
+  &.about-fixed {
+    justify-content: flex-end;
+  }
 
   @media screen and (min-width: 1050px) {
     padding-left: 200px;
@@ -16,6 +21,14 @@
   .left-content {
     width: 50%;
     padding-right: 150px;
+    transition: 15s top ease;
+
+    &.left-fixed {
+      position: fixed;
+      width: 40%;
+      top: 0px;
+      left: 200px;
+    }
 
     h1 {
       -webkit-text-stroke: 0.5px;
@@ -50,147 +63,94 @@
     width: 50%;
     padding-top: 30px;
     color: var(--background-yellow);
-    opacity: 0.6;
-    user-select: none;
+    position: relative;
 
-    .drop-container {
-      width: 100%;
+    .skills {
+      display: flex;
+      flex-direction: column;
 
-      .drop {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        margin-bottom: 30px;
+      .skill {
+        font-size: 16px;
+        margin: 8px 0;
+        background: var(--background-yellow);
+        padding: 8px 12px;
+        border-radius: 4px;
+        color: black;
+        transform: translateY(0);
+        transition: transform 0.2s ease-in-out;
+        position: relative;
+        width: 100px;
+        text-align: center;
+        z-index: 100;
 
-        .font-title {
-          font-size: 40px;
-          margin-right: 20px;
+        &:nth-child(1) {
+          top: 10%;
+          left: 10%;
+          background-color: blue;
         }
 
-        .container {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 70%;
-          cursor: pointer;
-
-          .main {
-            p {
-              opacity: 0.6;
-            }
-          }
-
-          .caret {
-            cursor: pointer;
-
-            .anime-in {
-              animation: anime-in 0.4s forwards ease-in-out;
-            }
-
-            .anime-out {
-              animation: anime-out 0.4s forwards ease-in-out;
-            }
-          }
-        }
-      }
-
-      .content {
-        margin-left: 60px;
-        margin-bottom: 20px;
-        width: 70%;
-
-        .tech {
-          width: 90%;
-          margin: auto;
-
-          @media screen and (max-width: 500px) {
-            width: 100%;
-          }
-
-          .container {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            .text {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
-              p {
-                padding-right: 10px;
-              }
-
-              .icon {
-                font-size: 20px;
-              }
-            }
-          }
-
-          .range {
-            width: 100%;
-            height: 5px;
-            background: rgb(66, 66, 66);
-            border-radius: 5px;
-            margin-bottom: 10px;
-            overflow: hidden;
-
-            .bar {
-              height: 5px;
-              border-radius: 5px;
-              background: gold;
-            }
-          }
+        &:nth-child(2) {
+          top: 30%;
+          left: 30%;
+          background-color: red;
         }
 
-        .tech-stack {
-          width: 90%;
-          background: var(--background-yellow);
-          padding: 15px;
-          margin: auto;
+        &:nth-child(3) {
+          top: 50%;
+          left: 50%;
+          background-color: green;
+        }
 
-          @media screen and (max-width: 500px) {
-            width: 100%;
-          }
+        &:nth-child(4) {
+          top: 70%;
+          left: 70%;
+          background-color: yellow;
+        }
 
-          .text {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            color: black;
-            padding-bottom: 10px;
+        &:nth-child(5) {
+          top: 90%;
+          left: 90%;
+          background-color: purple;
+        }
 
-            p {
-              padding-left: 10px;
-              font-weight: 600;
-            }
+        &:nth-child(6) {
+          top: 20%;
+          left: 70%;
+          background-color: orange;
+        }
 
-            .icon-tech {
-              font-size: 20px;
-            }
-          }
+        &:nth-child(7) {
+          top: 40%;
+          left: 20%;
+          background-color: pink;
+        }
+
+        &:nth-child(8) {
+          top: 60%;
+          left: 80%;
+          background-color: brown;
+        }
+
+        &:nth-child(9) {
+          top: 80%;
+          left: 40%;
+          background-color: teal;
+        }
+
+        &:nth-child(10) {
+          top: 90%;
+          left: 10%;
+          background-color: cyan;
         }
       }
     }
-  }
-}
 
-@keyframes anime-out {
-  0% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-
-@keyframes anime-in {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(180deg);
+    .container-anima {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(1.5);
+    }
   }
 }
 

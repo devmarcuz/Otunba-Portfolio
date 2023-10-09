@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Work from "./pages/Work";
 import Blog from "./pages/Blog";
 import BlogPage from "./pages/BlogPage";
+import Scroll from "./components/Scroll";
 
 function App() {
   const [showAnimation, setShowAnimation] = useState(true);
@@ -12,6 +13,8 @@ function App() {
   return (
     <Router>
       <div className="app">
+        {/* <Scroll /> */}
+
         <Routes>
           <Route
             path="/"

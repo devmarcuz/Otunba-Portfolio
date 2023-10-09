@@ -4,16 +4,21 @@
   background-color: black;
   padding-left: 120px;
   display: flex;
-  align-items: flex-end;
-  padding-bottom: 150px;
+  align-items: center;
+  padding-bottom: 50px;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
+@media screen and (min-width: 1050px) {
+  .left-home {
+    padding-left: 200px;
+  }
+}
 .left-home .content h1 {
   -webkit-text-stroke: 0.5px;
   -webkit-text-stroke-color: var(--background-yellow);
-  font-size: 50px;
+  font-size: 60px;
   line-height: 50px;
 }
 .left-home .content h1 span {
@@ -27,6 +32,11 @@
   color: rgb(185, 184, 184);
   padding-top: 25px;
   width: 60%;
+  font-size: 15px;
+  background: linear-gradient(45deg, #dfeefd, #ebe9fe, #f4faf1, #e0f8ff, #eaebfc);
+  -webkit-background-clip: text; /* For Webkit/Blink browsers like Chrome and Safari */
+  background-clip: text;
+  color: transparent;
 }
 .left-home .content .info .name-span {
   color: var(--background-yellow);
@@ -41,9 +51,13 @@
   width: 70%;
   opacity: 0.7;
   margin-top: 100px;
+  font-size: 12px;
+}
+.left-home .content .skills p {
+  width: 45%;
 }
 .left-home .content .skills p:first-child {
-  margin-right: 50px;
+  margin-right: 0px;
 }
 
 @media screen and (max-width: 1070px) {
@@ -60,20 +74,16 @@
     align-items: center;
   }
   .left-home .content h1 {
-    -webkit-text-stroke: 0.5px;
-    -webkit-text-stroke-color: var(--background-yellow);
     font-size: 50px;
     line-height: 50px;
   }
   .left-home .content h1 span {
-    color: white;
     font-size: 40px;
     -webkit-text-stroke: 0;
     -webkit-text-stroke-color: transparent;
     padding-left: 3px;
   }
   .left-home .content .info {
-    color: rgb(185, 184, 184);
     padding-top: 25px;
     width: 60%;
   }

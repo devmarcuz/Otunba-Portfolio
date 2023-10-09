@@ -52,8 +52,8 @@ const Portfolio2 = ({ workRef }) => {
               <span>React.js</span> <span>SCSS</span> <span>Firebase</span>
             </div>
             <p className="desc">
-              Explore insightful articles, vlogs, and content on topics ranging
-              from relationships, faith, lifestyle, and more on the blog
+              Discover diverse content on relationships, faith, lifestyle, and
+              more on the blog.
             </p>
             <div className="end">
               <a
@@ -78,7 +78,10 @@ const Portfolio2 = ({ workRef }) => {
             <div className="stack">
               <span>React.js</span> <span>SCSS</span>
             </div>
-            <p className="desc">This project was built for a job interview</p>
+            <p className="desc">
+              Simplify staff and financial management for individuals and
+              businesses.
+            </p>
             <div className="end">
               <a
                 href="https://eazipay-frontend-i5fk.vercel.app"
