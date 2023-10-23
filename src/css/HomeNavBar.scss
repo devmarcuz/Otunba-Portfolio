@@ -58,6 +58,12 @@
         width: 350px;
       }
 
+      @media screen and (max-width: 900px) {
+        &.no-wrap {
+          width: 78px;
+        }
+      }
+
       h2 {
         cursor: pointer;
         padding-top: 30px;
@@ -69,6 +75,12 @@
 
         &.wrap {
           transform: translateX(-22%);
+        }
+
+        @media screen and (max-width: 900px) {
+          &.wrap {
+            transform: translateX(0%);
+          }
         }
       }
 
