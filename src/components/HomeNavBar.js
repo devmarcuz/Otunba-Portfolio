@@ -114,11 +114,21 @@ const HomeNavBar = ({ setMenuRepo, menuRepo, setActive, active }) => {
     });
   }, [logoRef]);
 
+  useEffect(() => {
+    if (window.matchMedia("(max-width: 500px)").matches) {
+      document.querySelector(".logo-name").style.display = "none";
+      // Your code here for screens smaller than or equal to 500 pixels
+    } else {
+      document.querySelector(".logo-name-1").style.display = "none";
+    }
+  }, []);
+
   return (
     <div className={bgBool ? "home-nav location" : "home-nav"}>
       <div className={bgBool ? "logo location" : "logo"}>
         <Link to="/" ref={logoRef} className={bgBool ? "h2 location" : "h2"}>
-          <h2>otunba Ademola Otunba-Marcus</h2>
+          <h2 className="logo-name">otunba Ademola Otunba-Marcus</h2>
+          <h2 className="logo-name-1">otunba</h2>
         </Link>
       </div>
       <div className={bgBool ? "menu location" : "menu"}>
