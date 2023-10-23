@@ -2,6 +2,11 @@
   width: 100%;
   background: black;
   padding: 60px 120px;
+  position: relative;
+
+  @media screen and (min-width: 1050px) {
+    padding: 60px 200px;
+  }
 
   h1 {
     -webkit-text-stroke: 0.5px;
@@ -16,6 +21,19 @@
     color: rgb(185, 184, 184);
     // opacity: 0.4;
     padding-bottom: 40px;
+    color: rgb(185, 184, 184);
+    font-size: 15px;
+    background: linear-gradient(
+      45deg,
+      #dfeefd,
+      #ebe9fe,
+      #f4faf1,
+      #e0f8ff,
+      #eaebfc
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
   form {

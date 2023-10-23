@@ -14,6 +14,7 @@ import {
   RiGithubLine,
   RiTwitterLine,
 } from "react-icons/ri";
+import { FaXTwitter, FaSquareXTwitter } from "react-icons/fa6";
 // import { CgMenuMotion } from "react-icons/cg";
 import "../css/Footer.css";
 
@@ -25,7 +26,7 @@ const Footer = () => {
 
   return (
     <div className="footer">
-      <div className="contact-view">
+      {/* <div className="contact-view">
         <h2>SAY HELLO</h2>
         <a href="mailto:otunbamarcusademola@gmail.com" className="ctc">
           <HiMail className="icon" />
@@ -35,6 +36,12 @@ const Footer = () => {
           <ImPhone className="icon" />
           <p>+234 803 5915 522</p>
         </a>
+       
+      </div> */}
+      <div className="contain">
+        <div className="copyright">
+          &copy; {new Date().getFullYear()} Otunba. All Rights Reserved
+        </div>
         <div className={"socials"}>
           <a
             href="https://instagram.com/marcuzdrip"
@@ -98,12 +105,9 @@ const Footer = () => {
               }, 200)
             }
           >
-            {hover3 ? <FaTwitter /> : <RiTwitterLine />}
+            {hover3 ? <FaSquareXTwitter /> : <FaXTwitter />}
           </a>
         </div>
-      </div>
-      <div className="copyright">
-        &copy; {new Date().getFullYear()} Otunba. All Rights Reserved
       </div>
     </div>
   );

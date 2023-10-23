@@ -75,7 +75,7 @@
   justify-content: right;
   position: relative;
   z-index: 100;
-  padding-top: 35px;
+  padding-top: 38px;
 }
 @media screen and (min-width: 1050px) {
   .home-nav .menu {

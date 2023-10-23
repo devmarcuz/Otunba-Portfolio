@@ -2,6 +2,12 @@
   width: 100%;
   background: black;
   padding: 60px 120px;
+  position: relative;
+}
+@media screen and (min-width: 1050px) {
+  .contact {
+    padding: 60px 200px;
+  }
 }
 .contact h1 {
   -webkit-text-stroke: 0.5px;
@@ -14,6 +20,12 @@
   color: var(--background-yellow);
   color: rgb(185, 184, 184);
   padding-bottom: 40px;
+  color: rgb(185, 184, 184);
+  font-size: 15px;
+  background: linear-gradient(45deg, #dfeefd, #ebe9fe, #f4faf1, #e0f8ff, #eaebfc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 .contact form {
   color: rgb(185, 184, 184);

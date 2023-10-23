@@ -4,43 +4,47 @@ import { FaHandHolding } from "react-icons/fa";
 import Lottie, { useLottie } from "lottie-react";
 import SkillAnime from "../lotties/Animation - 1696856374590.json";
 
-const About = ({ aboutRef }) => {
+const About = ({ aboutRef, skillRef }) => {
   const [isFixed, setIsFixed] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [positioned, setPositioned] = useState(false);
   const leftContentRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const aboutSection = aboutRef.current;
+      const skillSection = skillRef.current;
       const leftContent = leftContentRef.current;
       const skillsContainer = aboutSection.querySelector(".skills");
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
 
       if (!isAnimating) {
-        if (scrollTop >= aboutSection.offsetTop) {
+        if (scrollTop >= skillSection.offsetTop) {
           // When scrolling down, fix the left content and animate skills
           setIsFixed(true);
+          setPositioned(false);
           setIsAnimating(true);
           const skills = skillsContainer.querySelectorAll(".skill");
           const speedMultiplier = 0.05; // Adjust the animation speed as needed
 
           skills.forEach((skill, index) => {
             const translateY =
-              -(scrollTop - aboutSection.offsetTop) *
+              -(scrollTop - skillSection.offsetTop) *
               (index + 1) *
               speedMultiplier;
             skill.style.transform = `translateY(${translateY}px)`;
           });
+        } else {
+          setPositioned(true);
         }
       }
 
       if (
         scrollTop >=
-        aboutSection.offsetTop + aboutSection.offsetHeight - window.innerHeight
+        skillSection.offsetTop + skillSection.offsetHeight - window.innerHeight
       ) {
         // When skills are done scrolling, remove the fixed position
-
         setIsFixed(false);
         setIsAnimating(false);
       }
@@ -50,16 +54,13 @@ const About = ({ aboutRef }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [aboutRef, isAnimating]);
+  }, [aboutRef, isAnimating, skillRef]);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
       //   const scrollTop = window.scrollY;
-      console.log(leftContentRef.current.offsetTop, "offsettop");
-      console.log(aboutRef.current.offsetTop, "about");
-      console.log(scrollTop, "window");
 
       if (aboutRef.current.offsetTop + 100 <= scrollTop) {
         // console.log("yes");

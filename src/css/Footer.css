@@ -1,7 +1,11 @@
 .footer {
-  background: var(--background-yellow);
   padding: 60px 120px;
-  height: 70vh;
+  position: relative;
+}
+@media screen and (min-width: 1050px) {
+  .footer {
+    padding: 60px 200px;
+  }
 }
 .footer .contact-view {
   display: flex;
@@ -54,15 +58,44 @@
   opacity: 0;
   transition: 0.8s all ease-in-out;
 }
-.footer .copyright {
-  border-top: 1px solid black;
-  padding-top: 50px;
+.footer .contain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgb(255, 255, 255);
+  padding-top: 40px;
+}
+.footer .contain .copyright {
+  color: white;
+}
+.footer .contain .socials {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  transform: translateX(0);
+  opacity: 1;
+  transition: 0.8s all ease-in-out;
+}
+.footer .contain .socials a {
+  font-size: 20px;
+  transition: 0.3s all ease-in-out;
+  color: white;
+}
+.footer .contain .socials a:hover {
+  transform: scale(1.1) translateY(-5px);
+  color: rgb(239, 211, 0);
+}
+.footer .contain .socials.active {
+  transform: translateX(100%);
+  opacity: 0;
+  transition: 0.8s all ease-in-out;
 }
 
 @media screen and (max-width: 1070px) {
   .footer {
     padding: 60px 90px;
-    height: 80vh;
   }
 }
 @media screen and (max-width: 700px) {

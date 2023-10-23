@@ -170,6 +170,7 @@
   backdrop-filter: blur(10px);
   border-radius: 50px;
   transition: 0.5s all ease-in-out;
+  z-index: 1000;
 
   &.activate {
     bottom: 5%;

@@ -66,11 +66,29 @@
     padding-left: 90px;
     padding-right: 90px;
   }
+  .skill-section h1 {
+    font-size: 55px;
+  }
+  .skill-section .left-content {
+    width: 45%;
+  }
+  .skill-section .right-content {
+    width: 45%;
+  }
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 992px) {
+  .skill-section h1 {
+    font-size: 45px;
+  }
   .skill-section .letter {
     font-size: 18em;
     font-weight: 700;
+  }
+  .skill-section .left-content {
+    width: 47%;
+  }
+  .skill-section .right-content {
+    width: 47%;
   }
 }
 @media screen and (max-width: 805px) {
@@ -97,11 +115,6 @@
   .skill-section .letter {
     font-size: 14em;
     font-weight: 700;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .skill-section {
-    height: 50vh;
   }
 }
 @media screen and (max-width: 500px) {
