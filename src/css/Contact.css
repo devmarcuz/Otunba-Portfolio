@@ -44,6 +44,24 @@
 .contact .hello a {
   color: white;
   font-size: 14px;
+  position: relative;
+}
+.contact .hello a .overlay {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: rgb(206, 178, 21);
+  opacity: 0.7;
+  transform-origin: right;
+  width: 0%;
+  height: 12px;
+  transition: 0.3s all ease-in-out;
+}
+.contact .hello a:hover .overlay {
+  width: 50%;
+  left: 0;
+  bottom: 5px;
+  right: auto;
 }
 
 /* Extra small devices (phones, 0 - 576px) */

@@ -183,6 +183,7 @@ const Contact = ({ contactRef }) => {
         <h2>SAY HELLO</h2>
         <a href="mailto:otunbamarcusademola@gmail.com">
           otunbamarcusademola@gmail.com
+          <div className="overlay"></div>
         </a>
       </div>
       {/* 
