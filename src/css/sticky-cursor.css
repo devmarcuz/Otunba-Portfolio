@@ -12,7 +12,7 @@
   background-color: rgb(255, 208, 0);
   mix-blend-mode: difference;
 }
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 992px) {
   .sticky-cursor {
     display: none;
   }
