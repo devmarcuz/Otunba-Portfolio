@@ -46,7 +46,12 @@ const MainHero = ({ stickyElement }) => {
         )}
 
         <GrabMagnetic>
-          <Link to="" target="_blank" className="icon" ref={stickyElement}>
+          <Link
+            to="https://drive.google.com/file/d/1u5rFVtmye5VuctdHVsvziAU9Vz5XwtIN/view"
+            target="_blank"
+            className="icon"
+            ref={stickyElement}
+          >
             <PiReadCvLogoBold />
           </Link>
         </GrabMagnetic>
