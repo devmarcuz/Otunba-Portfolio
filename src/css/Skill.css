@@ -1,20 +1,16 @@
-.skill-section {
-  width: 100%;
-  background: rgb(165, 165, 165);
+.skill-section-container {
   background: #16161a;
+  width: 100%;
+}
+.skill-section-container .skill-section {
+  width: 1100px;
+  margin: 0 auto;
   display: flex;
-  padding: 60px 0;
-  padding-left: 120px;
-  padding-right: 120px;
+  padding: 100px 0;
   justify-content: space-between;
   position: relative;
 }
-@media screen and (min-width: 1050px) {
-  .skill-section {
-    padding: 60px 200px;
-  }
-}
-.skill-section .letter {
+.skill-section-container .skill-section .letter {
   font-size: 20em;
   position: absolute;
   left: 50%;
@@ -32,17 +28,17 @@
   -webkit-text-stroke-color: rgb(255, 200, 0);
   opacity: 0.2;
 }
-.skill-section .left-content {
+.skill-section-container .skill-section .left-content {
   width: 40%;
   z-index: 1;
 }
-.skill-section .right-content {
+.skill-section-container .skill-section .right-content {
   width: 40%;
   display: flex;
   align-items: flex-end;
   z-index: 1;
 }
-.skill-section h1 {
+.skill-section-container .skill-section h1 {
   font-size: 70px;
   color: black;
   background: linear-gradient(45deg, #dfeefd, #ebe9fe, #f4faf1, #e0f8ff, #eaebfc);
@@ -50,10 +46,10 @@
   background-clip: text;
   color: transparent;
 }
-.skill-section h1.remove-cursor {
+.skill-section-container .skill-section h1.remove-cursor {
   cursor: none;
 }
-.skill-section p {
+.skill-section-container .skill-section p {
   color: black;
   background: linear-gradient(45deg, #dfeefd, #ebe9fe, #f4faf1, #e0f8ff, #eaebfc);
   -webkit-background-clip: text;
@@ -62,10 +58,6 @@
 }
 
 @media screen and (max-width: 1070px) {
-  .skill-section {
-    padding-left: 90px;
-    padding-right: 90px;
-  }
   .skill-section h1 {
     font-size: 55px;
   }
@@ -85,10 +77,10 @@
     font-weight: 700;
   }
   .skill-section .left-content {
-    width: 47%;
+    width: 50%;
   }
   .skill-section .right-content {
-    width: 47%;
+    width: 50%;
   }
 }
 @media screen and (max-width: 805px) {
@@ -108,20 +100,12 @@
   }
 }
 @media screen and (max-width: 700px) {
-  .skill-section {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
   .skill-section .letter {
     font-size: 14em;
     font-weight: 700;
   }
 }
 @media screen and (max-width: 500px) {
-  .skill-section {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
   .skill-section h1 {
     font-size: 35px;
   }
@@ -136,5 +120,62 @@
 @media screen and (max-width: 400px) {
   .skill-section h1 {
     font-size: 35px;
+  }
+}
+/* Extra small devices (phones, 0 - 576px) */
+@media only screen and (max-width: 576px) {
+  .skill-section-container .letter {
+    display: none;
+  }
+  .skill-section-container .skill-section {
+    width: 90%;
+    flex-direction: column;
+  }
+  .skill-section-container .skill-section h1 {
+    font-size: 35px;
+  }
+  .skill-section-container .skill-section .left-content {
+    width: 100%;
+  }
+  .skill-section-container .skill-section .right-content {
+    width: 100%;
+  }
+}
+/* Small devices (landscape phones, 576px - 768px) */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .skill-section-container .skill-section {
+    width: 80%;
+    flex-direction: column;
+  }
+  .skill-section-container .skill-section .left-content {
+    width: 100%;
+  }
+  .skill-section-container .skill-section .right-content {
+    width: 100%;
+  }
+}
+/* Medium devices (tablets, 768px - 992px) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .skill-section-container .skill-section {
+    width: 80%;
+    flex-direction: column;
+  }
+  .skill-section-container .skill-section .left-content {
+    width: 100%;
+  }
+  .skill-section-container .skill-section .right-content {
+    width: 100%;
+  }
+}
+/* Large devices (desktops/laptops, 992px - 1200px) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .skill-section-container .skill-section {
+    width: 80%;
+  }
+  .skill-section-container .skill-section .left-content {
+    width: 50%;
+  }
+  .skill-section-container .skill-section .right-content {
+    width: 50%;
   }
 }/*# sourceMappingURL=Skill.css.map */

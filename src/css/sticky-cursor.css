@@ -1,0 +1,19 @@
+.sticky-cursor {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000;
+  transition: 0.2s background ease-in-out;
+}
+.sticky-cursor.stick-dark {
+  background-color: rgb(255, 208, 0);
+  mix-blend-mode: difference;
+}
+@media only screen and (max-width: 575px) {
+  .sticky-cursor {
+    display: none;
+  }
+}/*# sourceMappingURL=sticky-cursor.css.map */

@@ -16,7 +16,13 @@ import {
 import { CgMenuMotion } from "react-icons/cg";
 import { Link, useLocation } from "react-router-dom";
 
-const HomeNavBar = ({ setMenuRepo, menuRepo, setActive, active }) => {
+const HomeNavBar = ({
+  setMenuRepo,
+  menuRepo,
+  setActive,
+  active,
+  stickyElement,
+}) => {
   const [bgBool, setBgBool] = useState(false);
   const [hover, setHover] = useState(false);
   const [hover1, setHover1] = useState(false);
@@ -145,7 +151,7 @@ const HomeNavBar = ({ setMenuRepo, menuRepo, setActive, active }) => {
           />
         )} */}
         {!active ? (
-          <div className="burger font" onClick={burger}>
+          <div ref={stickyElement} className="burger font" onClick={burger}>
             <CgMenuMotion className={bgBool ? "bar location" : "bar"} />
           </div>
         ) : (
@@ -154,6 +160,7 @@ const HomeNavBar = ({ setMenuRepo, menuRepo, setActive, active }) => {
               bgBool ? "burger times location font" : "burger times font"
             }
             onClick={burger}
+            refX={stickyElement}
           />
         )}
 

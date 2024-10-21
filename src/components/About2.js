@@ -56,32 +56,32 @@ const About = ({ aboutRef, skillRef }) => {
     };
   }, [aboutRef, isAnimating, skillRef]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      //   const scrollTop = window.scrollY;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollTop =
+  //       window.pageYOffset || document.documentElement.scrollTop;
+  //     //   const scrollTop = window.scrollY;
 
-      if (aboutRef.current.offsetTop + 100 <= scrollTop) {
-        // console.log("yes");
-        leftContentRef.current.classList.add("left-fixed");
-        // console.log(aboutRef.current.offsetTop, "about");
-        aboutRef.current.classList.add("about-fixed");
-        if (aboutRef.current.offsetTop > scrollTop) {
-          leftContentRef.current.classList.remove("left-fixed");
-          aboutRef.current.classList.remove("about-fixed");
-        }
-      } else {
-        leftContentRef.current.classList.remove("left-fixed");
-        aboutRef.current.classList.remove("about-fixed");
-      }
-    };
+  //     if (aboutRef.current.offsetTop + 100 <= scrollTop) {
+  //       // console.log("yes");
+  //       leftContentRef.current.classList.add("left-fixed");
+  //       // console.log(aboutRef.current.offsetTop, "about");
+  //       aboutRef.current.classList.add("about-fixed");
+  //       if (aboutRef.current.offsetTop > scrollTop) {
+  //         leftContentRef.current.classList.remove("left-fixed");
+  //         aboutRef.current.classList.remove("about-fixed");
+  //       }
+  //     } else {
+  //       leftContentRef.current.classList.remove("left-fixed");
+  //       aboutRef.current.classList.remove("about-fixed");
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [leftContentRef, aboutRef]);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [leftContentRef, aboutRef]);
 
   const options = {
     animationData: SkillAnime,

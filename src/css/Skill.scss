@@ -1,95 +1,90 @@
-.skill-section {
-  width: 100%;
-  background: rgb(165, 165, 165);
+.skill-section-container {
   background: #16161a;
-  display: flex;
-  padding: 60px 0;
-  padding-left: 120px;
-  padding-right: 120px;
-  justify-content: space-between;
-  position: relative;
+  width: 100%;
 
-  @media screen and (min-width: 1050px) {
-    padding: 60px 200px;
-  }
-
-  .letter {
-    font-size: 20em;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    font-weight: 700;
-    transform: translate(-50%, -50%);
-    user-select: none;
-    color: black;
-    background: linear-gradient(
-      45deg,
-      #dfeefd,
-      #ebe9fe,
-      #f4faf1,
-      #e0f8ff,
-      #eaebfc
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-stroke: 0.5px;
-    -webkit-text-stroke-color: rgb(255, 200, 0);
-    opacity: 0.2;
-  }
-
-  .left-content {
-    width: 40%;
-    z-index: 1;
-  }
-
-  .right-content {
-    width: 40%;
+  .skill-section {
+    width: 1100px;
+    margin: 0 auto;
     display: flex;
-    align-items: flex-end;
-    z-index: 1;
-  }
+    padding: 100px 0;
+    justify-content: space-between;
+    position: relative;
 
-  h1 {
-    font-size: 70px;
-    color: black;
-    background: linear-gradient(
-      45deg,
-      #dfeefd,
-      #ebe9fe,
-      #f4faf1,
-      #e0f8ff,
-      #eaebfc
-    );
-    -webkit-background-clip: text; /* For Webkit/Blink browsers like Chrome and Safari */
-    background-clip: text;
-    color: transparent;
-
-    &.remove-cursor {
-      cursor: none;
+    .letter {
+      font-size: 20em;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-weight: 700;
+      transform: translate(-50%, -50%);
+      user-select: none;
+      color: black;
+      background: linear-gradient(
+        45deg,
+        #dfeefd,
+        #ebe9fe,
+        #f4faf1,
+        #e0f8ff,
+        #eaebfc
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-stroke: 0.5px;
+      -webkit-text-stroke-color: rgb(255, 200, 0);
+      opacity: 0.2;
     }
-  }
 
-  p {
-    color: black;
-    background: linear-gradient(
-      45deg,
-      #dfeefd,
-      #ebe9fe,
-      #f4faf1,
-      #e0f8ff,
-      #eaebfc
-    );
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    .left-content {
+      width: 40%;
+      z-index: 1;
+    }
+
+    .right-content {
+      width: 40%;
+      display: flex;
+      align-items: flex-end;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 70px;
+      color: black;
+      background: linear-gradient(
+        45deg,
+        #dfeefd,
+        #ebe9fe,
+        #f4faf1,
+        #e0f8ff,
+        #eaebfc
+      );
+      -webkit-background-clip: text; /* For Webkit/Blink browsers like Chrome and Safari */
+      background-clip: text;
+      color: transparent;
+
+      &.remove-cursor {
+        cursor: none;
+      }
+    }
+
+    p {
+      color: black;
+      background: linear-gradient(
+        45deg,
+        #dfeefd,
+        #ebe9fe,
+        #f4faf1,
+        #e0f8ff,
+        #eaebfc
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
   }
 }
 
 @media screen and (max-width: 1070px) {
   .skill-section {
-    padding-left: 90px;
-    padding-right: 90px;
-
     h1 {
       font-size: 55px;
     }
@@ -116,11 +111,11 @@
     }
 
     .left-content {
-      width: 47%;
+      width: 50%;
     }
 
     .right-content {
-      width: 47%;
+      width: 50%;
     }
   }
 }
@@ -147,9 +142,6 @@
 
 @media screen and (max-width: 700px) {
   .skill-section {
-    padding-left: 60px;
-    padding-right: 60px;
-
     .letter {
       font-size: 14em;
       font-weight: 700;
@@ -159,9 +151,6 @@
 
 @media screen and (max-width: 500px) {
   .skill-section {
-    padding-left: 40px;
-    padding-right: 40px;
-
     h1 {
       font-size: 35px;
     }
@@ -181,6 +170,85 @@
   .skill-section {
     h1 {
       font-size: 35px;
+    }
+  }
+}
+
+/* Extra small devices (phones, 0 - 576px) */
+@media only screen and (max-width: 576px) {
+  .skill-section-container {
+    .letter {
+      display: none;
+    }
+
+    .skill-section {
+      width: 90%;
+      flex-direction: column;
+
+      h1 {
+        font-size: 35px;
+      }
+
+      .left-content {
+        width: 100%;
+      }
+
+      .right-content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Small devices (landscape phones, 576px - 768px) */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .skill-section-container {
+    .skill-section {
+      width: 80%;
+      flex-direction: column;
+
+      .left-content {
+        width: 100%;
+      }
+
+      .right-content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Medium devices (tablets, 768px - 992px) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .skill-section-container {
+    .skill-section {
+      width: 80%;
+      flex-direction: column;
+
+      .left-content {
+        width: 100%;
+      }
+
+      .right-content {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* Large devices (desktops/laptops, 992px - 1200px) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .skill-section-container {
+    .skill-section {
+      width: 80%;
+
+      .left-content {
+        width: 50%;
+      }
+
+      .right-content {
+        width: 50%;
+      }
     }
   }
 }

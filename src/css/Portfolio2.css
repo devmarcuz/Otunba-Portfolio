@@ -1,32 +1,44 @@
-.portofolio-section {
+.portfolio-section-container {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+}
+.portfolio-section-container .letter {
+  position: absolute;
+  display: none;
+  top: -13%;
+  right: -60%;
+  font-size: 25em;
+  color: rgb(82, 81, 81);
+  opacity: 0.1;
+  font-weight: 700;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  color: black;
+  background: linear-gradient(45deg, #dfeefd, #ebe9fe, #f4faf1, #e0f8ff, #eaebfc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0.5px;
+  -webkit-text-stroke-color: rgb(255, 200, 0);
+  opacity: 0.2;
+}
+.portfolio-section-container .portofolio-section {
   background: black;
   padding: 50px 0;
-  overflow-x: hidden;
+  width: 1100px;
+  margin: 0 auto;
   position: relative;
 }
-.portofolio-section h1 {
+.portfolio-section-container .portofolio-section h1 {
   -webkit-text-stroke: 0.5px;
   -webkit-text-stroke-color: var(--background-yellow);
-  font-size: 50px;
-  padding-left: 120px;
+  font-size: 70px;
 }
-@media screen and (min-width: 1050px) {
-  .portofolio-section h1 {
-    padding: 0 200px;
-  }
-}
-.portofolio-section .content {
-  padding-left: 125px;
-  padding-right: 120px;
+.portfolio-section-container .portofolio-section .content {
   padding-top: 30px;
 }
-@media screen and (min-width: 1050px) {
-  .portofolio-section .content {
-    padding: 0 200px;
-    padding-top: 30px;
-  }
-}
-.portofolio-section .content p {
+.portfolio-section-container .portofolio-section .content p {
   color: var(--text-color);
   font-size: 16px;
   background: linear-gradient(45deg, #dfeefd, #ebe9fe, #f4faf1, #e0f8ff, #eaebfc);
@@ -34,44 +46,38 @@
   background-clip: text;
   color: transparent;
 }
-.portofolio-section .content p a {
+.portfolio-section-container .portofolio-section .content p a {
   color: var(--background-yellow);
   opacity: 0.7;
   transition: 0.3s all ease-in-out;
 }
-.portofolio-section .content p a:hover {
+.portfolio-section-container .portofolio-section .content p a:hover {
   opacity: 0.5;
 }
-.portofolio-section section {
+.portfolio-section-container .portofolio-section section {
   width: 100%;
-  padding: 100px 100px;
-  padding-left: 120px;
+  padding: 100px 0;
 }
-@media screen and (min-width: 1050px) {
-  .portofolio-section section {
-    padding: 100px 200px;
-  }
-}
-.portofolio-section section .projects {
+.portfolio-section-container .portofolio-section section .projects {
   display: grid;
-  grid-gap: 4rem;
+  grid-gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
-.portofolio-section section .projects .proj {
+.portfolio-section-container .portofolio-section section .projects .proj {
   height: 280px;
   position: relative;
   transition: 0.3s all ease-in-out;
   overflow: hidden;
   color: black;
-  background: rgb(24, 22, 0);
+  background: rgba(22, 20, 0, 0.762);
   padding: 30px 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.portofolio-section section .projects .proj .overlay {
+.portfolio-section-container .portofolio-section section .projects .proj .overlay {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -81,49 +87,50 @@
   height: 3px;
   transition: 0.3s all ease-in-out;
 }
-.portofolio-section section .projects .proj:hover .overlay {
+.portfolio-section-container .portofolio-section section .projects .proj:hover .overlay {
   width: 100%;
   left: 0;
   right: auto;
 }
-.portofolio-section section .projects .proj h3 {
+.portfolio-section-container .portofolio-section section .projects .proj h3 {
   color: rgb(206, 178, 21);
 }
-.portofolio-section section .projects .proj .stack span {
+.portfolio-section-container .portofolio-section section .projects .proj .stack span {
   background: rgba(0, 0, 0, 0.575);
   color: rgb(206, 178, 21);
-  font-size: 11px;
+  font-size: 12px;
   padding: 5px;
   border-radius: 5px;
   margin-right: 3px;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 @media screen and (max-width: 500px) {
-  .portofolio-section section .projects .proj .stack span {
+  .portfolio-section-container .portofolio-section section .projects .proj .stack span {
     font-size: 10px;
     padding: 3px;
   }
 }
-.portofolio-section section .projects .proj p.desc {
+.portfolio-section-container .portofolio-section section .projects .proj p.desc {
   font-size: 14px;
   color: rgb(206, 178, 21);
 }
-.portofolio-section section .projects .proj .end {
+.portfolio-section-container .portofolio-section section .projects .proj .end {
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
 }
-.portofolio-section section .projects .proj .end .view {
+.portfolio-section-container .portofolio-section section .projects .proj .end .view {
   display: flex;
   align-items: center;
   color: rgb(206, 178, 21);
 }
-.portofolio-section section .projects .proj .end .view p {
+.portfolio-section-container .portofolio-section section .projects .proj .end .view p {
   padding-left: 10px;
   font-size: 14px;
 }
-.portofolio-section section .projects .proj .end .git-container {
+.portfolio-section-container .portofolio-section section .projects .proj .end .git-container {
   color: rgb(179, 154, 17);
   font-size: 23px;
   display: flex;
@@ -133,14 +140,14 @@
      -moz-user-select: none;
           user-select: none;
 }
-.portofolio-section section .projects .project {
+.portfolio-section-container .portofolio-section section .projects .project {
   height: 280px;
   position: relative;
   transition: 0.3s all ease-in-out;
   overflow: hidden;
   color: black;
 }
-.portofolio-section section .projects .project img {
+.portfolio-section-container .portofolio-section section .projects .project img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -150,7 +157,7 @@
      -moz-user-select: none;
           user-select: none;
 }
-.portofolio-section section .projects .project .overlay {
+.portfolio-section-container .portofolio-section section .projects .project .overlay {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -162,7 +169,7 @@
   transition: 0.3s all ease-in-out;
   opacity: 0.4;
 }
-.portofolio-section section .projects .project .title-overlay {
+.portfolio-section-container .portofolio-section section .projects .project .title-overlay {
   position: absolute;
   content: "";
   bottom: -100%;
@@ -177,18 +184,18 @@
      -moz-user-select: all;
           user-select: all;
 }
-.portofolio-section section .projects .project .title-overlay p {
+.portfolio-section-container .portofolio-section section .projects .project .title-overlay p {
   font-size: 14px;
 }
-.portofolio-section section .projects .project .title-overlay h3 {
+.portfolio-section-container .portofolio-section section .projects .project .title-overlay h3 {
   cursor: default;
 }
 @media screen and (max-width: 600px) {
-  .portofolio-section section .projects .project .title-overlay .technologies {
+  .portfolio-section-container .portofolio-section section .projects .project .title-overlay .technologies {
     padding-top: 5px;
   }
 }
-.portofolio-section section .projects .project .title-overlay .technologies {
+.portfolio-section-container .portofolio-section section .projects .project .title-overlay .technologies {
   display: flex;
   width: 100%;
   align-items: center;
@@ -196,10 +203,10 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.portofolio-section section .projects .project .title-overlay .technologies .stack {
+.portfolio-section-container .portofolio-section section .projects .project .title-overlay .technologies .stack {
   flex: 0.8;
 }
-.portofolio-section section .projects .project .title-overlay .technologies .stack span {
+.portfolio-section-container .portofolio-section section .projects .project .title-overlay .technologies .stack span {
   background: rgba(0, 0, 0, 0.575);
   color: rgb(253, 220, 33);
   font-size: 11px;
@@ -209,12 +216,12 @@
   margin-bottom: 10px;
 }
 @media screen and (max-width: 500px) {
-  .portofolio-section section .projects .project .title-overlay .technologies .stack span {
+  .portfolio-section-container .portofolio-section section .projects .project .title-overlay .technologies .stack span {
     font-size: 10px;
     padding: 3px;
   }
 }
-.portofolio-section section .projects .project .title-overlay .technologies a {
+.portfolio-section-container .portofolio-section section .projects .project .title-overlay .technologies a {
   flex: 0.2;
   color: black;
   font-size: 23px;
@@ -225,10 +232,10 @@
      -moz-user-select: none;
           user-select: none;
 }
-.portofolio-section section .projects .project .title-overlay .technologies a .git {
+.portfolio-section-container .portofolio-section section .projects .project .title-overlay .technologies a .git {
   float: left;
 }
-.portofolio-section section .projects .project .view {
+.portfolio-section-container .portofolio-section section .projects .project .view {
   position: absolute;
   content: "";
   top: 20%;
@@ -249,131 +256,54 @@
           user-select: none;
   color: black;
 }
-.portofolio-section section .projects .project .view p {
+.portfolio-section-container .portofolio-section section .projects .project .view p {
   font-size: 13px;
   text-align: center;
   font-weight: 500;
 }
 @media screen and (max-width: 500px) {
-  .portofolio-section section .projects .project .view {
+  .portfolio-section-container .portofolio-section section .projects .project .view {
     top: 8%;
     transform: translate(-50%, -8%) scale(0.65);
   }
 }
-.portofolio-section section .projects .project:hover img {
+.portfolio-section-container .portofolio-section section .projects .project:hover img {
   transform: scale(1.3);
 }
-.portofolio-section section .projects .project:hover .view {
+.portfolio-section-container .portofolio-section section .projects .project:hover .view {
   opacity: 1;
 }
-.portofolio-section section .projects .project:hover .overlay {
+.portfolio-section-container .portofolio-section section .projects .project:hover .overlay {
   background: none;
 }
-.portofolio-section section .projects .project:hover .title-overlay {
+.portfolio-section-container .portofolio-section section .projects .project:hover .title-overlay {
   bottom: 0;
 }
-.portofolio-section .letter {
-  position: absolute;
-  top: -13%;
-  right: -20%;
-  font-size: 25em;
-  color: rgb(82, 81, 81);
-  opacity: 0.1;
-  font-weight: 700;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  color: black;
-  background: linear-gradient(45deg, #dfeefd, #ebe9fe, #f4faf1, #e0f8ff, #eaebfc);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-stroke: 0.5px;
-  -webkit-text-stroke-color: rgb(255, 200, 0);
-  opacity: 0.2;
-}
 
-@media screen and (max-width: 1070px) {
-  .portofolio-section h1 {
-    padding-left: 90px;
+/* Extra small devices (phones, 0 - 576px) */
+@media only screen and (max-width: 576px) {
+  .portfolio-section-container .portofolio-section {
+    width: 90%;
   }
-  .portofolio-section .content {
-    padding-left: 95px;
-    padding-right: 80px;
-    padding-top: 30px;
-  }
-  .portofolio-section section {
-    padding: 60px 0;
-    padding-left: 95px;
-    padding-right: 80px;
-  }
-  .portofolio-section .letter {
-    right: -19%;
-    font-size: 24em;
+  .portfolio-section-container .portofolio-section h1 {
+    font-size: 40px;
   }
 }
-@media screen and (max-width: 960px) {
-  .portofolio-section .letter {
-    right: -19%;
-    font-size: 20em;
-    top: -5%;
+/* Small devices (landscape phones, 576px - 768px) */
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .portfolio-section-container .portofolio-section {
+    width: 80%;
   }
 }
-@media screen and (max-width: 805px) {
-  .portofolio-section .letter {
-    right: -23%;
-    font-size: 19em;
-    top: 0%;
+/* Medium devices (tablets, 768px - 992px) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .portfolio-section-container .portofolio-section {
+    width: 80%;
   }
 }
-@media screen and (max-width: 700px) {
-  .portofolio-section h1 {
-    padding-left: 60px;
-  }
-  .portofolio-section .content {
-    padding-left: 65px;
-    padding-right: 60px;
-    padding-top: 30px;
-  }
-  .portofolio-section section {
-    padding: 60px 0;
-    padding-left: 65px;
-    padding-right: 60px;
-  }
-  .portofolio-section .letter {
-    right: -28%;
-    font-size: 19em;
-    top: 0%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .portofolio-section h1 {
-    font-size: 35px;
-    padding-left: 45px;
-  }
-  .portofolio-section .content {
-    padding-left: 45px;
-    padding-right: 40px;
-  }
-  .portofolio-section .content p {
-    font-size: 14px;
-  }
-  .portofolio-section .content button {
-    padding: 10px 50px;
-    font-size: 14px;
-  }
-  .portofolio-section section {
-    padding: 60px 0;
-    padding-left: 45px;
-    padding-right: 40px;
-  }
-  .portofolio-section .letter {
-    right: -28%;
-    font-size: 17em;
-    top: 0%;
-  }
-}
-@media screen and (max-width: 400px) {
-  .portofolio-section .letter {
-    font-size: 15em;
+/* Large devices (desktops/laptops, 992px - 1200px) */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  .portfolio-section-container .portofolio-section {
+    width: 80%;
   }
 }/*# sourceMappingURL=Portfolio2.css.map */

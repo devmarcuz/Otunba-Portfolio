@@ -174,9 +174,18 @@ const Contact = ({ contactRef }) => {
 
   return (
     <div className="contact" onClick={contactArea} ref={contactRef}>
-      <h1>Send me a message!</h1>
-      <p>Got a question or proposal, or just want to say hello? Go ahead.</p>
-
+      <p>
+        I can help you design, improve or build the product experience for your
+        new or existing products. Feel free to get in touch with me.
+      </p>
+      <h1>Do You Have Any Ideas</h1>
+      <div className="hello">
+        <h2>SAY HELLO</h2>
+        <a href="mailto:otunbamarcusademola@gmail.com">
+          otunbamarcusademola@gmail.com
+        </a>
+      </div>
+      {/* 
       <form action="" onSubmit={onSubmit}>
         {error && <ErrorMessage error={error} />}
         {success && <SuccessMessage success={success} />}
@@ -227,7 +236,7 @@ const Contact = ({ contactRef }) => {
             <p>Send Message</p>
           </div>
         </div>
-      </form>
+      </form> */}
     </div>
   );
 };

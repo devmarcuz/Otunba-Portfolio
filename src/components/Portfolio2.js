@@ -6,237 +6,127 @@ import "../css/Portfolio2.css";
 
 const Portfolio2 = ({ workRef }) => {
   return (
-    <div className="portofolio-section" ref={workRef}>
-      <div className="letter">Work</div>
-      <h1>My Portfolio</h1>
-      <div className="content">
-        <p>
-          I have personally selected a small gallery of recent projects that I
-          have completed. These projects showcase my skills and capabilities as
-          a developer. While this is only a small selection of my work, I
-          believe it gives a good representation of the kind of projects that I
-          have undertaken.
-        </p>
-      </div>
-      <section>
-        <div className="projects">
-          <div className="proj">
-            <h3>getLinked</h3>
-            <div className="stack">
-              <span>React.js</span> <span>SCSS</span> <span>API</span>
+    <div className="portfolio-section-container">
+      <div className="portofolio-section" ref={workRef}>
+        <div className="letter">Work</div>
+        <h1>My Portfolio</h1>
+        <div className="content">
+          <p>
+            I have personally selected a small gallery of recent projects that I
+            have completed. These projects showcase my skills and capabilities
+            as a developer. While this is only a small selection of my work, I
+            believe it gives a good representation of the kind of projects that
+            I have undertaken.
+          </p>
+        </div>
+        <section>
+          <div className="projects">
+            <div className="proj">
+              <h3>Blueprint</h3>
+              <div className="stack">
+                <span>Reactjs</span>
+                <span>SCSS</span>
+                <span>Framer Motion</span>
+              </div>
+              <p className="desc">Transforming Ideas into Digital Solutions</p>
+              <div className="end">
+                <a
+                  href="https://www.chooseblueprint.com/"
+                  target="blank"
+                  className="view"
+                >
+                  <AiOutlineGlobal /> <p>View</p>
+                </a>
+                <div className="overlay"></div>
+              </div>
             </div>
-            <p className="desc">
-              This project was built during a hackathon challenge
-            </p>
-            <div className="end">
-              <a
-                href="https://getlink-tech-hackathon-marcuz.vercel.app"
-                target="blank"
-                className="view"
-              >
-                <AiOutlineGlobal /> <p>View</p>
-              </a>
-              <a
-                className="git-container"
-                href="https://github.com/devmarcuz/getlink-tech-hackathon"
-                target="blank"
-              >
-                <FaGithubAlt className="git" />
-              </a>
-              <div className="overlay"></div>
+            <div className="proj">
+              <h3>Immunocore</h3>
+              <div className="stack">
+                <span>Reactjs</span>
+                <span>SCSS</span>
+                <span>NodeJs</span>
+              </div>
+              <p className="desc">
+                Immunocore developed world's first TCR therapy.
+              </p>
+              <div className="end">
+                <a
+                  href="https://www.immunocore.us/"
+                  target="blank"
+                  className="view"
+                >
+                  <AiOutlineGlobal /> <p>View</p>
+                </a>
+                <div className="overlay"></div>
+              </div>
             </div>
-          </div>
-          <div className="proj">
-            <h3>Gifttage Corner</h3>
-            <div className="stack">
-              <span>React.js</span> <span>SCSS</span> <span>Firebase</span>
+            <div className="proj">
+              <h3>Endo</h3>
+              <div className="stack">
+                <span>Nextjs</span>
+                <span>SCSS</span>
+                <span>Nodejs</span>
+              </div>
+              <p className="desc">
+                Endo fosters better health, brighter future.
+              </p>
+              <div className="end">
+                <a
+                  href="https://www.endotherapeutics.us"
+                  target="blank"
+                  className="view"
+                >
+                  <AiOutlineGlobal /> <p>View</p>
+                </a>
+                <div className="overlay"></div>
+              </div>
             </div>
-            <p className="desc">
-              Discover diverse content on relationships, faith, lifestyle, and
-              more on the blog.
-            </p>
-            <div className="end">
-              <a
-                href="https://gifttage-corner.vercel.app"
-                target="blank"
-                className="view"
-              >
-                <AiOutlineGlobal /> <p>View</p>
-              </a>
-              <a
-                className="git-container"
-                href="https://github.com/devmarcuz/gifttage-corner-blog"
-                target="blank"
-              >
-                <FaGithubAlt className="git" />
-              </a>
-              <div className="overlay"></div>
+            <div className="proj">
+              <h3>GetLinked</h3>
+              <div className="stack">
+                <span>Reactjs</span>
+                <span>SCSS</span>
+                <span>GSAP</span>
+                <span>API</span>
+              </div>
+              <p className="desc">
+                GetLinked is a design, development and concept hackathon.
+              </p>
+              <div className="end">
+                <a
+                  href="https://hackathon.getlinked.ai/"
+                  target="blank"
+                  className="view"
+                >
+                  <AiOutlineGlobal /> <p>View</p>
+                </a>
+                <div className="overlay"></div>
+              </div>
             </div>
-          </div>
-          <div className="proj">
-            <h3>Eazipay</h3>
-            <div className="stack">
-              <span>React.js</span> <span>SCSS</span>
+            <div className="proj">
+              <h3>Ecommerce Platform API</h3>
+              <div className="stack">
+                <span>Node.js</span>
+                <span>Express.js</span>
+                <span>MongoDB</span>
+                <span>Stripe</span>
+              </div>
+              <p className="desc">
+                This is the backend for an ecommerce platform.
+              </p>
+              <div className="end">
+                <a
+                  className="git-container"
+                  href="https://github.com/devmarcuz/ecommerce-platform-backend"
+                  target="blank"
+                >
+                  <FaGithubAlt className="git" />
+                </a>
+                <div className="overlay"></div>
+              </div>
             </div>
-            <p className="desc">
-              Simplify staff and financial management for individuals and
-              businesses.
-            </p>
-            <div className="end">
-              <a
-                href="https://eazipay-frontend-i5fk.vercel.app"
-                target="blank"
-                className="view"
-              >
-                <AiOutlineGlobal /> <p>View</p>
-              </a>
-              <a
-                className="git-container"
-                href="https://github.com/devmarcuz/eazipay-frontend"
-                target="blank"
-              >
-                <FaGithubAlt className="git" />
-              </a>
-              <div className="overlay"></div>
-            </div>
-          </div>
-          <div className="proj">
-            <h3>FreeFrames</h3>
-            <div className="stack">
-              <span>React.js</span> <span>SCSS</span>
-            </div>
-            <p className="desc">
-              An application that offers free high quality images that can be
-              used for any purpose.
-            </p>
-            <div className="end">
-              <a
-                href="https://free-frames.vercel.app"
-                target="blank"
-                className="view"
-              >
-                <AiOutlineGlobal /> <p>View</p>
-              </a>
-              <a
-                className="git-container"
-                href="https://github.com/devmarcuz/Free-Frames"
-                target="blank"
-              >
-                <FaGithubAlt className="git" />
-              </a>
-              <div className="overlay"></div>
-            </div>
-          </div>
-          <div className="proj">
-            <h3>Glass Bridge</h3>
-            <div className="stack">
-              <span>React.js</span> <span>MongoDB</span> <span>Node.js</span>
-            </div>
-            <p className="desc">
-              A web application that stimulates a glass brigde over a beautiful
-              valley.
-            </p>
-            <div className="end">
-              <a
-                href="https://glass-bridge.vercel.app"
-                target="blank"
-                className="view"
-              >
-                <AiOutlineGlobal /> <p>View</p>
-              </a>
-              <a
-                className="git-container"
-                href="https://github.com/devmarcuz/Glass-Bridge"
-                target="blank"
-              >
-                <FaGithubAlt className="git" />
-              </a>
-              <div className="overlay"></div>
-            </div>
-          </div>
-          <div className="proj">
-            <h3>Swift Chat</h3>
-            <div className="stack">
-              <span>React.js</span> <span>MongoDB</span> <span>Node.js</span>{" "}
-              <span>Socket.IO</span>
-            </div>
-            <p className="desc">
-              This is a chat application that allows users communicate with
-              users in real-time.
-            </p>
-            <div className="end">
-              <a
-                href="https://swift-chat-apps.netlify.app"
-                target="blank"
-                className="view"
-              >
-                <AiOutlineGlobal /> <p>View</p>
-              </a>
-              <a
-                className="git-container"
-                href="https://github.com/devmarcuz/SWIFT-Chat-App-Frontend"
-                target="blank"
-              >
-                <FaGithubAlt className="git" />
-              </a>
-              <div className="overlay"></div>
-            </div>
-          </div>
-          <div className="proj">
-            <h3>AskAI</h3>
-            <div className="stack">
-              <span>React.js</span> <span>OpenAI</span> <span>Node.js</span>{" "}
-              <span>SASS</span>
-            </div>
-            <p className="desc">
-              It allows users to ask questions and get responses by the AI.
-            </p>
-            <div className="end">
-              <a
-                href="https://ask-ai-devmarcuz.vercel.app"
-                target="blank"
-                className="view"
-              >
-                <AiOutlineGlobal /> <p>View</p>
-              </a>
-              <a
-                className="git-container"
-                href="https://github.com/devmarcuz/AskAI"
-                target="blank"
-              >
-                <FaGithubAlt className="git" />
-              </a>
-              <div className="overlay"></div>
-            </div>
-          </div>
-          <div className="proj">
-            <h3>Ecommerce Platform API</h3>
-            <div className="stack">
-              <span>Node.js</span> <span>Express.js</span> <span>MongoDB</span>{" "}
-              <span>Stripe</span>
-            </div>
-            <p className="desc">
-              This is the backend for an ecommerce platform.
-            </p>
-            <div className="end">
-              <a
-                href="https://github.com/devmarcuz/ecommerce-platform-backend/blob/master/README.md"
-                target="blank"
-                className="view"
-              >
-                <AiOutlineGlobal /> <p>View</p>
-              </a>
-              <a
-                className="git-container"
-                href="https://github.com/devmarcuz/ecommerce-platform-backend"
-                target="blank"
-              >
-                <FaGithubAlt className="git" />
-              </a>
-              <div className="overlay"></div>
-            </div>
-          </div>
-          {/* <div className="project">
+            {/* <div className="project">
             <img
               src="/images/FreeFrames — Mozilla Firefox 4_3_2023 7_57_51 AM.png"
               alt=""
@@ -375,8 +265,9 @@ const Portfolio2 = ({ workRef }) => {
               </p>
             </a>
           </div> */}
-        </div>
-      </section>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };

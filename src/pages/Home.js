@@ -16,6 +16,8 @@ import Portfolio2 from "../components/Portfolio2";
 import { GoHome } from "react-icons/go";
 import { CiUser } from "react-icons/ci";
 import { MdWorkspacesOutline, MdImportContacts } from "react-icons/md";
+import StickyCursor from "../components/StickyCursor";
+import MainHero from "../components/MainHero";
 
 const Home = ({ showAnimation, setShowAnimation }) => {
   const [menuRepo, setMenuRepo] = useState(false);
@@ -26,6 +28,7 @@ const Home = ({ showAnimation, setShowAnimation }) => {
   const contactRef = useRef();
   const aboutRef = useRef();
   const skillRef = useRef();
+  const stickyElement = useRef(null);
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -134,17 +137,19 @@ const Home = ({ showAnimation, setShowAnimation }) => {
           <div className="right"></div>
         </div>
       )}
-      <HomeNavBar
+      {/* <HomeNavBar
         setMenuRepo={setMenuRepo}
         menuRepo={menuRepo}
         active={active}
+        stickyElement={stickyElement}
         setActive={setActive}
-      />
-      <main className="main-home">
+      /> */}
+      {/* <main className="main-home">
         <LeftHomeSection />
         <RightHomeSection />
         <RightHomeMedia />
-      </main>
+      </main> */}
+      <MainHero stickyElement={stickyElement} />
       <MenuReponsive setMenuRepo={setMenuRepo} menuRepo={menuRepo} />
       <Skill skillRef={skillRef} />
       <About aboutRef={aboutRef} skillRef={skillRef} />
@@ -175,6 +180,7 @@ const Home = ({ showAnimation, setShowAnimation }) => {
         </span>
       </div>
       <Footer />
+      <StickyCursor currentIndex={0} stickyElement={stickyElement} />
     </div>
   );
 };
