@@ -60,7 +60,7 @@ const Footer = () => {
             {hover ? <RiInstagramFill /> : <FaInstagram />}
           </a>
           <a
-            href="https://linkedin.com/in/ademola-otunba-marcus-742ab1209"
+            href="https://www.linkedin.com/in/otunbamarcus"
             target="blank"
             onMouseEnter={() =>
               setTimeout(() => {
