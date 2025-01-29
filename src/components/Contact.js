@@ -175,8 +175,9 @@ const Contact = ({ contactRef }) => {
   return (
     <div className="contact" onClick={contactArea} ref={contactRef}>
       <p>
-        I can help you design, improve or build the product experience for your
-        new or existing products. Feel free to get in touch with me.
+        I can help you build, improve, or optimize your web and mobile
+        applications for a seamless product experience. Feel free to get in
+        touch with me.
       </p>
       <h1>Do You Have Any Ideas</h1>
       <div className="hello">
