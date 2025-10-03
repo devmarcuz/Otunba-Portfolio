@@ -1,8 +1,76 @@
 import React from "react";
 import { FaGithubAlt } from "react-icons/fa";
 import { AiOutlineGlobal } from "react-icons/ai";
-import { Link } from "react-router-dom";
 import "../css/Portfolio2.css";
+
+/* =========================
+   Portfolio Projects (Data)
+========================= */
+const PORTFOLIO = [
+  {
+    id: "habitat",
+    title: "Habitat",
+    desc: "Habitat’s website lets prospects explore coastal farm plots and amenities",
+    stack: ["NextJs", "Google Map Api", "Framer Motion", "Gsap"],
+    live: "https://www.habitatdevelopers.co/",
+  },
+  {
+    id: "yamify",
+    title: "Yamify",
+    desc: "Yamify lets you launch and run ai tools while saving 60% on costs",
+    stack: ["NextJs", "Kubernetes", "NestJs"],
+    live: "https://yamify.co/",
+  },
+  {
+    id: "srotimi",
+    title: "Srotimi",
+    desc: "Designing usability for Web3, AI and TechStartups.",
+    stack: ["Reactjs", "SCSS", "Framer Motion"],
+    live: "https://srotimi.design/",
+  },
+  {
+    id: "indexwallets",
+    title: "Index Wallets",
+    desc: "Index Wallets provides zero-fee payments for local businesses.",
+    stack: ["NextJs", "SCSS", "Framer Motion"],
+    live: "https://www.indexwallets.org/",
+  },
+  {
+    id: "blueprint",
+    title: "Blueprint",
+    desc: "Transforming Ideas into Digital Solutions",
+    stack: ["Reactjs", "SCSS", "Framer Motion"],
+    live: "https://www.chooseblueprint.com/",
+  },
+  {
+    id: "immunocore",
+    title: "Immunocore",
+    desc: "Immunocore developed world's first TCR therapy.",
+    stack: ["Reactjs", "SCSS", "NodeJs"],
+    live: "https://www.immunocore.us/",
+  },
+  {
+    id: "endo",
+    title: "Endo",
+    desc: "Endo fosters better health, brighter future.",
+    stack: ["Nextjs", "SCSS", "Nodejs"],
+    live: "https://www.endotherapeutics.us",
+  },
+  {
+    id: "getlinked",
+    title: "GetLinked",
+    desc: "GetLinked is a design, development and concept hackathon.",
+    stack: ["Reactjs", "SCSS", "GSAP", "API"],
+    live: "https://hackathon.getlinked.ai/",
+  },
+  {
+    id: "ecom-api",
+    title: "Ecommerce Platform API",
+    desc: "This is the backend for an ecommerce platform.",
+    stack: ["Node.js", "Express.js", "MongoDB", "Stripe"],
+    repo: "https://github.com/devmarcuz/ecommerce-platform-backend",
+  },
+];
 
 const Portfolio2 = ({ workRef }) => {
   return (
@@ -10,6 +78,7 @@ const Portfolio2 = ({ workRef }) => {
       <div className="portofolio-section" ref={workRef}>
         <div className="letter">Work</div>
         <h1>My Portfolio</h1>
+
         <div className="content">
           <p>
             I have personally selected a small gallery of recent projects that I
@@ -19,252 +88,53 @@ const Portfolio2 = ({ workRef }) => {
             I have undertaken.
           </p>
         </div>
+
         <section>
           <div className="projects">
-            <div className="proj">
-              <h3>Blueprint</h3>
-              <div className="stack">
-                <span>Reactjs</span>
-                <span>SCSS</span>
-                <span>Framer Motion</span>
-              </div>
-              <p className="desc">Transforming Ideas into Digital Solutions</p>
-              <div className="end">
-                <a
-                  href="https://www.chooseblueprint.com/"
-                  target="blank"
-                  className="view"
-                >
-                  <AiOutlineGlobal /> <p>View</p>
-                </a>
-                <div className="overlay"></div>
-              </div>
-            </div>
-            <div className="proj">
-              <h3>Immunocore</h3>
-              <div className="stack">
-                <span>Reactjs</span>
-                <span>SCSS</span>
-                <span>NodeJs</span>
-              </div>
-              <p className="desc">
-                Immunocore developed world's first TCR therapy.
-              </p>
-              <div className="end">
-                <a
-                  href="https://www.immunocore.us/"
-                  target="blank"
-                  className="view"
-                >
-                  <AiOutlineGlobal /> <p>View</p>
-                </a>
-                <div className="overlay"></div>
-              </div>
-            </div>
-            <div className="proj">
-              <h3>Endo</h3>
-              <div className="stack">
-                <span>Nextjs</span>
-                <span>SCSS</span>
-                <span>Nodejs</span>
-              </div>
-              <p className="desc">
-                Endo fosters better health, brighter future.
-              </p>
-              <div className="end">
-                <a
-                  href="https://www.endotherapeutics.us"
-                  target="blank"
-                  className="view"
-                >
-                  <AiOutlineGlobal /> <p>View</p>
-                </a>
-                <div className="overlay"></div>
-              </div>
-            </div>
-            <div className="proj">
-              <h3>GetLinked</h3>
-              <div className="stack">
-                <span>Reactjs</span>
-                <span>SCSS</span>
-                <span>GSAP</span>
-                <span>API</span>
-              </div>
-              <p className="desc">
-                GetLinked is a design, development and concept hackathon.
-              </p>
-              <div className="end">
-                <a
-                  href="https://hackathon.getlinked.ai/"
-                  target="blank"
-                  className="view"
-                >
-                  <AiOutlineGlobal /> <p>View</p>
-                </a>
-                <div className="overlay"></div>
-              </div>
-            </div>
-            <div className="proj">
-              <h3>Ecommerce Platform API</h3>
-              <div className="stack">
-                <span>Node.js</span>
-                <span>Express.js</span>
-                <span>MongoDB</span>
-                <span>Stripe</span>
-              </div>
-              <p className="desc">
-                This is the backend for an ecommerce platform.
-              </p>
-              <div className="end">
-                <a
-                  className="git-container"
-                  href="https://github.com/devmarcuz/ecommerce-platform-backend"
-                  target="blank"
-                >
-                  <FaGithubAlt className="git" />
-                </a>
-                <div className="overlay"></div>
-              </div>
-            </div>
-            {/* <div className="project">
-            <img
-              src="/images/FreeFrames — Mozilla Firefox 4_3_2023 7_57_51 AM.png"
-              alt=""
-            />
-            <div className="overlay"></div>
-            <div className="title-overlay">
-              <h3>FreeFrames</h3>
-              <p>
-                An application that offers free high quality images that can be
-                used for any purpose.
-              </p>
-              <div className="technologies">
+            {PORTFOLIO.map((p) => (
+              <div className="proj" key={p.id}>
+                <h3>{p.title}</h3>
+
                 <div className="stack">
-                  <span>React.js</span> <span>SCSS</span>
+                  {p.stack.map((tech, i) => (
+                    <span key={i}>{tech}</span>
+                  ))}
                 </div>
-                <a
-                  href="https://github.com/devmarcuz/Free-Frames"
-                  target="blank"
-                >
-                  <FaGithubAlt className="git" />
-                </a>
-              </div>
-            </div>
-            <a
-              href="https://free-frames.vercel.app"
-              target="blank"
-              className="view"
-            >
-              <p>
-                VIEW
-                <br /> PROJECT
-              </p>
-            </a>
-          </div>
-          <div className="project">
-            <img
-              src="/images/Glass Brigde - Google Chrome 4_4_2023 9_53_31 PM.png"
-              alt=""
-            />
-            <div className="overlay"></div>
-            <div className="title-overlay">
-              <h3>Glass Bridge</h3>
-              <p>
-                A web application that stimulates a glass brigde over a
-                beautiful valley.
-              </p>
-              <div className="technologies">
-                <div className="stack">
-                  <span>React.js</span> <span>MongoDB</span>{" "}
-                  <span>Node.js</span>
+
+                <p className="desc">{p.desc}</p>
+
+                <div className="end">
+                  {p.live && (
+                    <a
+                      href={p.live}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="view"
+                      aria-label={`Open ${p.title} website`}
+                      title="Open website"
+                    >
+                      <AiOutlineGlobal />
+                      <p>View</p>
+                    </a>
+                  )}
+
+                  {p.repo && (
+                    <a
+                      className="git-container"
+                      href={p.repo}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Open ${p.title} GitHub repository`}
+                      title="View source on GitHub"
+                    >
+                      <FaGithubAlt className="git" />
+                    </a>
+                  )}
+
+                  <div className="overlay"></div>
                 </div>
-                <a
-                  href="https://github.com/devmarcuz/Glass-Bridge"
-                  target="blank"
-                >
-                  <FaGithubAlt className="git" />
-                </a>
               </div>
-            </div>
-            <a
-              href="https://glass-bridge.vercel.app"
-              target="blank"
-              className="view"
-            >
-              <p>
-                VIEW
-                <br /> PROJECT
-              </p>
-            </a>
-          </div>
-          <div className="project">
-            <img
-              src="/images/SWIFT Chat App - Google Chrome 4_7_2023 6_18_41 PM.png"
-              alt=""
-            />
-            <div className="overlay"></div>
-            <div className="title-overlay">
-              <h3>Swift Chat</h3>
-              <p>
-                This is a chat application that allows users communicate with
-                users in real-time.
-              </p>
-              <div className="technologies">
-                <div className="stack">
-                  <span>React.js</span> <span>MongoDB</span>{" "}
-                  <span>Node.js</span> <span>Socket.IO</span>
-                </div>
-                <a
-                  href="https://github.com/devmarcuz/SWIFT-Chat-App-Frontend"
-                  target="blank"
-                >
-                  <FaGithubAlt className="git" />
-                </a>
-              </div>
-            </div>
-            <a
-              href="https://swift-chat-apps.netlify.app"
-              target="blank"
-              className="view"
-            >
-              <p>
-                VIEW
-                <br /> PROJECT
-              </p>
-            </a>
-          </div>
-          <div className="project">
-            <img
-              src="/images/AskAI - Google Chrome 4_12_2023 5_45_10 PM.png"
-              alt=""
-            />
-            <div className="overlay"></div>
-            <div className="title-overlay">
-              <h3>AskAI</h3>
-              <p>
-                It allows users to ask questions and get responses by the AI.
-              </p>
-              <div className="technologies">
-                <div className="stack">
-                  <span>React.js</span> <span>OpenAI</span> <span>Node.js</span>{" "}
-                  <span>SASS</span>
-                </div>
-                <a href="https://github.com/devmarcuz/AskAI" target="blank">
-                  <FaGithubAlt className="git" />
-                </a>
-              </div>
-            </div>
-            <a
-              href="https://ask-ai-devmarcuz.vercel.app"
-              target="blank"
-              className="view"
-            >
-              <p>
-                VIEW
-                <br /> PROJECT
-              </p>
-            </a>
-          </div> */}
+            ))}
           </div>
         </section>
       </div>
