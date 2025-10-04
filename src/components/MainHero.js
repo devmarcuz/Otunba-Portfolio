@@ -47,7 +47,7 @@ const MainHero = ({ stickyElement }) => {
 
         <GrabMagnetic>
           <Link
-            to="https://drive.google.com/file/d/1u5rFVtmye5VuctdHVsvziAU9Vz5XwtIN/view"
+            to="https://drive.google.com/file/d/17vr4SZsC_LAan79pLgdHYSgX64heo-ig/view"
             target="_blank"
             className="icon"
             ref={stickyElement}
