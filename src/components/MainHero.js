@@ -84,7 +84,7 @@ const MainHero = ({ stickyElement }) => {
         <div className="right-home">
           <div className="img-border"></div>
           <div className="img-container">
-            <img src="/images/Otunba Marcus.jpg" alt="" />
+            <img src="/images/Otunba Marcus New.jpg" alt="" />
           </div>
         </div>
       </div>
